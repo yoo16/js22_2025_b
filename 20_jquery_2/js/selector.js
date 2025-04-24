@@ -13,11 +13,11 @@ $(() => {
     console.log(cityElements)
 
     // TODO: id=jp-city の class=city
-    var jpCityList
+    var jpCityList = $('#jp-city .city')
     console.log(jpCityList)
 
     // TODO: id=us-city
-    var usCityList
+    var usCityList = $('#us-city .city')
     console.log(usCityList)
 
     // TODO: html() 取得
