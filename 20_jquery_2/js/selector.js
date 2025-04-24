@@ -1,7 +1,9 @@
 $(() => {
     // TODO: id=title
-    var titleElement
-    console.log(titleElement)
+    var titleElement = $('#title')
+    console.log(titleElement.text())
+    // バニラJS
+    // var titleElement = document.getElementById('title')
 
     // TODO: class=city
     var cityElements
