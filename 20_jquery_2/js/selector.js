@@ -25,9 +25,12 @@ $(() => {
     console.log(title)
 
     // TODO: html() 設定
+    $('#title').html('JP City')
 
     // TODO: .city に addClass()
     // bg-gray-300
+    $('.city').addClass('bg-gray-300')
+    $('.city').addClass('font-bold')
 
     // TODO: .city に removeClass()
     // bg-gray-300
