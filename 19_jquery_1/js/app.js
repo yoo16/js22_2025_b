@@ -4,5 +4,10 @@
 // })
 
 // TODO: jQueryで、DOM読み込み後にアラート表示
+$(function () {
+    alert('はじまるよー')
+});
+
+alert('つぎいきます！')
 
 // TODO:DOM読み込み前の処理
