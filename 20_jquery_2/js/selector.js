@@ -6,6 +6,7 @@ $(() => {
     console.log(titleElement.text())
     // バニラJS
     // var titleElement = document.getElementById('title')
+    // console.log(titleElement.innerText)
 
     // TODO: class=city
     var cityElements
