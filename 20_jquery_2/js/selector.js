@@ -9,7 +9,7 @@ $(() => {
     // console.log(titleElement.innerText)
 
     // TODO: class=city
-    var cityElements
+    var cityElements = $('.city')
     console.log(cityElements)
 
     // TODO: id=jp-city の class=city
