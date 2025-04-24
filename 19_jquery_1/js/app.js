@@ -1,13 +1,16 @@
 // バニラJSで、DOM読み込み後にアラート表示
-// document.addEventListener("DOMContentLoaded", function () {
-//     alert("バニラJS")
-// })
+// Win: Ctrl + /
+// Mac: Cmd + /
+
+document.addEventListener("DOMContentLoaded", function () {
+    alert("バニラJS")
+})
 
 // あってるのに実行されない場合
 // Win: Ctrl + Shift + R
 // Mac: Cmd + Shift + R
 
-// TODO: jQueryで、DOM読み込み後にアラート表示
+// TODO: jQueryで、DOM(HTML)読み込み後にアラート表示
 $(function () {
     // HTMLがすべてブラウザで読み込まれた時に実行
     alert('はじまるよー')
