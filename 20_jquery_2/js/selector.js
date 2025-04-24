@@ -1,4 +1,6 @@
 $(() => {
+    // Win: Ctrl + Shift + R
+    // Mac: Cmd + Shift + R
     // TODO: id=title
     var titleElement = $('#title')
     console.log(titleElement.text())
