@@ -5,25 +5,48 @@
     <meta charset="UTF-8" />
     <title>jQuery width / height / offset / attr デモ</title>
 
-    <!-- Tailwind CSS & jQuery CDN -->
+    <!-- Tailwind & jQuery CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body class="min-h-screen bg-gray-100 flex flex-col items-center py-10">
 
-    <h1 class="text-2xl font-bold mb-8">jQuery width / height / offset / attr</h1>
+    <h1 class="text-2xl font-bold mb-6">サイズ</h1>
 
     <!-- 操作パネル -->
-    <div class="flex flex-wrap gap-3 mb-8">
-        <button id="show-size" class="text-white bg-sky-500 px-4 py-2 rounded">サイズ取得</button>
-        <button id="resize-small" class="text-white bg-sky-500 px-4 py-2 rounded">幅 120px に変更</button>
-        <button id="show-offset" class="text-white bg-sky-500 px-4 py-2 rounded">座標取得</button>
-        <button id="reset" class="btn bg-gray-300 px-4 py-2">Reset</button>
+    <div class="flex flex-wrap gap-3 mb-6">
+        <button id="resize-width" class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600">幅を変更</button>
+        <button id="reset" class="px-4 py-2 text-white bg-gray-300 hover:bg-gray-400">Reset</button>
     </div>
 
-    <!-- 情報出力 -->
-    <pre id="log" class="mb-8 p-4 bg-white rounded shadow min-w-[300px] text-sm"></pre>
+    <!-- ▼ 選択画像の情報テーブル -->
+    <table id="info-table" class="table-auto w-[280px] text-sm bg-white rounded shadow mb-8">
+        <thead>
+            <tr class="bg-gray-50">
+                <th class="px-4 py-2 text-left w-1/2">項目</th>
+                <th class="px-4 py-2 text-right">値 (px)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="px-4 py-1">幅 (width)</td>
+                <td id="info-width" class="px-4 py-1 text-right">–</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-1">高さ (height)</td>
+                <td id="info-height" class="px-4 py-1 text-right">–</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-1">offsetTop</td>
+                <td id="info-top" class="px-4 py-1 text-right">–</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-1">offsetLeft</td>
+                <td id="info-left" class="px-4 py-1 text-right">–</td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- 画像ギャラリー -->
     <section id="gallery" class="grid gap-6 grid-cols-3 px-4 lg:px-0">
@@ -39,7 +62,7 @@
         </template>
     </section>
 
-    <!-- 外部 JS 読み込み（jQuery の後に配置） -->
+    <!-- 外部 JS -->
     <script src="js/garally.js"></script>
 </body>
 
