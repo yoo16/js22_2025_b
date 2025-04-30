@@ -53,8 +53,8 @@ $(function () {
                 'data-index': i
             };
 
-            // TODO: img タグに propsを設定
-            $el.find('img');
+            // TODO: img タグを取得し、attr() で propsを設定
+            $el.find('img')
 
             $el.find('figcaption').text(`character_${i}`);
             $wrap.append($el);

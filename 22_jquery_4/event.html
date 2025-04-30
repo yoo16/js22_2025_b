@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="font-sans p-4 bg-gray-100">
+    <h1 class="text-2xl font-bold mb-6 text-center">Event Demo</h1>
+
+    <!-- 2カラムレイアウト -->
+    <div class="flex flex-col md:flex-row gap-6">
+        <!-- 左カラム -->
+        <div class="flex-1 space-y-6">
+            <!-- テキストボックス + ボタン -->
+            <section class="p-4 bg-white rounded-xl shadow">
+                <h2 class="font-bold text-xl text-center p-2">Input & Click & Blur & Forcusイベント</h2>
+                <div class="mb-4 flex space-x-2 items-center">
+                    <input id="input-text" type="text" class="border border-gray-300 px-3 py-2 rounded w-full">
+                    <button id="click-button" class="w-full bg-blue-500 text-white px-4 py-2 rounded">決定</button>
+                </div>
+                <div id="result-event" class="p-3 text-green-600 bg-green-100 rounded"></div>
+            </section>
+
+            <!-- プルダウン -->
+            <section class="p-4 bg-white rounded-xl shadow text-center space-y-4">
+                <h2 class="font-bold text-xl text-center p-2">Changeイベント</h2>
+                <p class="mt-2 text-sm text-gray-500">プルダウンを変更すると画像が変わります</p>
+                <select id="character-select" class="p-2 border border-gray-300 rounded w-full">
+                    <option value="1">Character1</option>
+                    <option value="2">Character2</option>
+                    <option value="3">Character3</option>
+                </select>
+            </section>
+
+            <!-- クリックリスト -->
+            <section class="p-4 bg-white rounded-xl shadow text-center">
+                <h2 class="font-bold text-xl text-center p-2">Clickイベント</h2>
+                <p class="mt-2 text-sm text-gray-500">選択すると画像が変わります</p>
+                <ul id="character-list" class="my-3 space-y-2">
+                    <li class="p-2 cursor-pointer bg-gray-100 rounded hover:bg-gray-200" data-character="1">Character1
+                    </li>
+                    <li class="p-2 cursor-pointer bg-gray-100 rounded hover:bg-gray-200" data-character="2">Character2
+                    </li>
+                    <li class="p-2 cursor-pointer bg-gray-100 rounded hover:bg-gray-200" data-character="3">Character3
+                    </li>
+                </ul>
+            </section>
+
+            <section class="p-4 bg-white rounded-xl shadow text-center">
+                <h2 class="font-bold text-xl text-center p-2">Mouseイベント</h2>
+                <p class="mt-2 text-sm text-gray-500">画像にマウスをのせると画像が変わります</p>
+                <p class="mt-2 text-sm text-gray-500">ボタンをクリックするとイベントがOFFになります</p>
+                <button id="event-off-button" class="bg-blue-500 text-white p-3 rounded my-2">Event OFF</button>
+            </section>
+        </div>
+
+        <!-- 右カラム -->
+        <div class="flex-1 space-y-6">
+            <!-- プルダウン／クリックによる画像切替 -->
+            <section class="p-4 bg-white rounded-xl shadow text-center">
+                <img id="character-image" src="images/character_1.png" alt="選択キャラクター"
+                    class="w-3/4 mx-auto rounded shadow" />
+            </section>
+
+            <!-- ホバー画像切り替え -->
+            <section class="p-4 bg-white rounded-xl shadow text-center">
+                <img id="hoverBox" src="images/character_4.png" alt="キャラクター1"
+                    class="w-3/4 mx-auto rounded shadow transition" />
+            </section>
+        </div>
+    </div>
+
+    <script src="js/event.js"></script>
+</body>
+
+</html>
