@@ -35,6 +35,7 @@ $(() => {
 
     // TODO: .city に removeClass()
     // bg-gray-300
+    $('.city').removeClass('bg-gray-300')
 
     // TODO: get(): .city に指定インデックスで取得(バニラJS)
 
