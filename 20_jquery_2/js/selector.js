@@ -43,12 +43,12 @@ $(() => {
     // TODO: eq(): .city の最初を取得し、class=bg-red-500 を追加
     $('.city').eq(0).addClass('bg-red-500')
 
-    // TODO: eq(): .city の最初を取得し、class=text-white を追加
+    // TODO: first(): .city の最初を取得し、class=text-white を追加
     $('.city').first().addClass('text-white')
 
-    // TODO: first(): .city の最初を取得し、class=bg-red-500 を追加
-
     // TODO: .city の最後を取得し、class=bg-red-500 を追加
+    $('.city').last().addClass('bg-red-500 text-white')
+
 
     // TODO: .city をすべて取得し、class=bg-red-300 を削除
 
