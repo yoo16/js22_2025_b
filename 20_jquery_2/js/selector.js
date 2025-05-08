@@ -26,8 +26,9 @@ $(() => {
 
     // TODO: html() 設定
     $('#title').html('JP City')
+    // document.getElementById('title').innerHTML = 'JP City'
 
-    // TODO: .city に addClass()
+    // TODO: .city に addClass(): class="bg-gray-300"
     // bg-gray-300
     $('.city').addClass('bg-gray-300')
     $('.city').addClass('font-bold')
