@@ -9,6 +9,7 @@ $(function () {
         const value = getInputValue();
         //TODO: liタグを作成し、テキスト表示
         const li = $("<li>");
+        li.text(value);
         //TODO: addClass() で defaultClass を追加
         li.addClass(defaultClass);
         return li;
