@@ -77,9 +77,9 @@ $(function () {
      */
     function updateInfo($img) {
         // TODO: 幅を取得 width()
-        const w = 0;
+        const w = $img.width();
         // TODO: 高さを取得
-        const h = 0;
+        const h = $img.height();
         // TODO: imgタグから最初に見つかった <figure> を closest() で取得し、ドキュメント左上 (0, 0) からの座標 offset() を計算
         const { top, left } = {};
 
