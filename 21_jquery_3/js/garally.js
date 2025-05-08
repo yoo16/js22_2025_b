@@ -57,7 +57,7 @@ $(function () {
             // Win：Ctrl + Shift + R
             // Mac: Cmd + Shift + R
             // TODO: img タグを取得し、attr() で propsを設定
-            $el.find('img')
+            $el.find('img').attr(props);
 
             $el.find('figcaption').text(`character_${i}`);
             $wrap.append($el);
