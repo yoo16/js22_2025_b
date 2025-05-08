@@ -81,7 +81,7 @@ $(function () {
         // TODO: 高さを取得
         const h = $img.height();
         // TODO: imgタグから最初に見つかった <figure> を closest() で取得し、ドキュメント左上 (0, 0) からの座標 offset() を計算
-        const { top, left } = {};
+        const { top, left } = $img.closest('figure').offset();
 
         $('#info-width').text(w);
         $('#info-height').text(h);
