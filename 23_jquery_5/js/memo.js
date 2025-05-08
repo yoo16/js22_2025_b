@@ -19,14 +19,14 @@ $(function () {
 
     $('#btn-append').on('click', function () {
         const element = newItem();
-        // TODO: 親要素(id=select-list)の最後に追加(append)
+        // TODO: 親要素(id=item-list)の最後に追加(append)
 
         $('#input-text').val('');
     });
 
     $('#btn-prepend').on('click', function () {
         const element = newItem();
-        // TODO: 親要素(id=select-list)の最初に追加(prepend)
+        // TODO: 親要素(id=item-list)の最初に追加(prepend)
 
         // TODO: テキストボックス(id=input-text)を空にする
     });
