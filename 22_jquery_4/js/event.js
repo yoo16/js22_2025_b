@@ -3,10 +3,14 @@
 //     $("#result-event").text('クリックしました')
 //  })
 
+// ブラウザのキャッシュクリア
+// Windows: Ctrl + Shift + R
+// Mac: Cmd + Shift + R
+
 // TODO: クリックイベント
-$("#click-button").on("", function () {
+$("#click-button").on("click", function () {
     // TODO: id=input-text のデータを取得
-    var userName = "";
+    var userName = $("#input-text").val();
     if (userName) {
         var message = userName + "さん、ようこそ！";
         $("#result-event").text(message);
