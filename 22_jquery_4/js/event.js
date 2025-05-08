@@ -68,9 +68,10 @@ const mouseOutHandler = function (event) {
 }
         
 // mouseイベント
-$('#hoverBox')
-    // TODO: マウスオーバーで、mouseOverHandler を実行
-    // TODO: mouseOutHandler を実行
+// TODO: マウスオーバーで、mouseOverHandler を実行
+// TODO: mouseOutHandler を実行
+$('#hoverBox').on('mouseover', mouseOverHandler)
+              .on('mouseout', mouseOutHandler)  
 
 // mouseイベント削除
 $('#event-off-button').on('click', function () {
