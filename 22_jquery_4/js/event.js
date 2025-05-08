@@ -37,7 +37,9 @@ $('#input-text').on({
 // change イベント
 $('#character-select').on('change', function () {
     // TODO: $(this) を使ってプルダウンで選択された value を取得
-    const id = 0;
+    const id = $(this).val();
+    // console.log(id);
+    // alert(id);
     updateImage(id);
 });
 
