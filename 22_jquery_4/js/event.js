@@ -19,9 +19,9 @@ $("#click-button").on("click", function () {
 
 $('#input-text').on({
     // TODO: inputイベント
-    "": function () {
+    input: function () {
         // TODO: 入力されたテキストを取得
-        const inputText = "";
+        const inputText = $(this).val();
         $("#result-event").text(inputText);
     },
     focus: function () {
@@ -30,6 +30,7 @@ $('#input-text').on({
     },
     blur: function () {
         // TODO: フォーカスがはずれた時に class=bg-blue-100 を削除
+        $(this).removeClass('bg-blue-100')
     }
 });
 
