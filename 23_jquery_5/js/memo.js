@@ -18,9 +18,11 @@ $(function () {
         return $('#input-text').val().trim() || 'New Item';
     }
 
+    // 最後に追加ボタン
     $('#btn-append').on('click', function () {
         const element = newItem();
         // TODO: 親要素(id=item-list)の最後に追加(append)
+        $('#item-list').append(element);
 
         $('#input-text').val('');
     });
