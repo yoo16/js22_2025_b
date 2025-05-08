@@ -45,8 +45,9 @@ $('#character-select').on('change', function () {
 
 // click イベント
 $('#character-list li').on('click', function () {
-    // TODO: $(this) を使って data-character を取得
-    const id = 0;
+    // $(this) から data-character 属性を取得
+    const id = $(this).data('character');
+    // const id = $(this).attr('data-character');
     updateImage(id);
 });
 
@@ -65,7 +66,7 @@ const mouseOverHandler = function (event) {
 const mouseOutHandler = function (event) {
     $(this).attr('src', 'images/character_4.png');
 }
-
+        
 // mouseイベント
 $('#hoverBox')
     // TODO: マウスオーバーで、mouseOverHandler を実行
