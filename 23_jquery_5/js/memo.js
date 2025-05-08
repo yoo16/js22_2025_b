@@ -8,8 +8,9 @@ $(function () {
     function newItem() {
         const value = getInputValue();
         //TODO: liタグを作成し、テキスト表示
-        const li = $();
+        const li = $("<li>");
         //TODO: addClass() で defaultClass を追加
+        li.addClass(defaultClass);
         return li;
     }
 
