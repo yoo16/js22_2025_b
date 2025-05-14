@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header id="header" class="text-gray-700 text-center py-16">
+        <h1 class="text-4xl font-bold">Cafe JS</h1>
+    </header>
+
+    <nav id="nav" class="top-0 w-full bg-gray-800 text-yellow-400">
+        <ul class="flex justify-between">
+            <li class="menu w-[25%] relative">
+                <a href="#hot-drinks" class="block w-full px-4 py-3 hover:bg-white">Hot Drinks</a>
+                <ul class="absolute hidden left-0 bg-gray-800 text-yellow-400 w-full">
+                    <li><a href="#hot-drinks" class="block px-4 py-3 hover:bg-white">Espresso</a></li>
+                    <li><a href="#hot-drinks" class="block px-4 py-3 hover:bg-white">Cafe Latte</a></li>
+                    <li><a href="#hot-drinks" class="block px-4 py-3 hover:bg-white">Herbal Tea</a></li>
+                </ul>
+            </li>
+            <li class="menu w-[25%] relative">
+                <a href="#iced-drinks" class="block w-full px-4 py-3 hover:bg-white">Iced Drinks</a>
+                <ul class="absolute hidden left-0 bg-gray-800 text-yellow-400 w-full">
+                    <li><a href="#iced-drinks" class="block px-4 py-3 hover:bg-white">Iced Latte</a></li>
+                    <li><a href="#iced-drinks" class="block px-4 py-3 hover:bg-white">Iced Mocha</a></li>
+                    <li><a href="#iced-drinks" class="block px-4 py-3 hover:bg-white">Iced Americano</a></li>
+                </ul>
+            </li>
+            <li class="menu w-[25%] relative">
+                <a href="#meals" class="block w-full px-4 py-3 hover:bg-white">Meals</a>
+                <ul class="absolute hidden left-0 bg-gray-800 text-yellow-400 w-full">
+                    <li><a href="#meals" class="block px-4 py-3 hover:bg-white">Grilled Cheese</a></li>
+                    <li><a href="#meals" class="block px-4 py-3 hover:bg-white">Caesar Salad</a></li>
+                    <li><a href="#meals" class="block px-4 py-3 hover:bg-white">Chicken Wrap</a></li>
+                </ul>
+            </li>
+            <li class="menu w-[25%] relative">
+                <a href="#sweets" class="block w-full px-4 py-3 hover:bg-white">Sweets</a>
+                <ul class="absolute hidden left-0 bg-gray-800 text-yellow-400 w-full">
+                    <li><a href="#sweets" class="block px-4 py-3 hover:bg-white">Cheesecake</a></li>
+                    <li><a href="#sweets" class="block px-4 py-3 hover:bg-white">Chocolate Brownie</a></li>
+                    <li><a href="#sweets" class="block px-4 py-3 hover:bg-white">Ice Cream Sundae</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="">
+        <section id="information" class="h-screen">
+            <h2 class="text-center text-3xl font-bold p-6 text-gray-900">Information</h2>
+            <div class="max-w-3xl mx-auto p-6 space-y-4">
+                <!-- お知らせカード -->
+                <div class="bg-white rounded-lg shadow p-4 border-l-4 border-yellow-400 flex gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">ゴールデンウィーク営業時間のお知らせ</h3>
+                        <p class="text-gray-600 mt-1">5月3日〜5日は祝日営業（10:00〜18:00）となります。通常営業は5月6日から再開します。</p>
+                        <p class="text-right text-sm text-gray-400 mt-2">2025年4月30日</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-4 border-l-4 border-yellow-400 flex gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">新メニュー登場！</h3>
+                        <p class="text-gray-600 mt-1">5月より「抹茶ラテ」「フレンチトースト」がメニューに加わりました。ぜひお試しください！</p>
+                        <p class="text-right text-sm text-gray-400 mt-2">2025年4月25日</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-4 border-l-4 border-yellow-400 flex gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">ポイントカードサービス開始</h3>
+                        <p class="text-gray-600 mt-1">お買い上げ500円ごとに1ポイント、10ポイントで1ドリンク無料！</p>
+                        <p class="text-right text-sm text-gray-400 mt-2">2025年4月15日</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hot-drinks" class="h-screen">
+            <h2 class="text-xl font-bold p-6 text-center bg-gray-800 text-yellow-400">Hot Drinks</h2>
+            <div class="grid gap-6 p-6">
+                <!-- 商品カード -->
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Espresso</h3>
+                    <p class="text-gray-600">シンプルで力強い一杯。目覚めにぴったりのクラシックなエスプレッソ。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥350</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Cafe Latte</h3>
+                    <p class="text-gray-600">まろやかなミルクとエスプレッソのハーモニー。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥450</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Herbal Tea</h3>
+                    <p class="text-gray-600">リラックス効果抜群。カフェインフリーのハーブティー。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥400</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="iced-drinks" class="h-screen">
+            <h2 class="text-xl font-bold p-6 text-center bg-gray-800 text-yellow-400">Iced Drinks</h2>
+            <div class="grid gap-6 p-6">
+                <!-- 商品カード -->
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Iced Latte</h3>
+                    <p class="text-gray-600">ミルクとエスプレッソを氷で冷やした夏の定番ドリンク。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥480</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Iced Mocha</h3>
+                    <p class="text-gray-600">チョコレートの甘さとエスプレッソの苦味が絶妙なバランス。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥500</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Iced Americano</h3>
+                    <p class="text-gray-600">スッキリとした飲みごたえ。氷で引き締まったアメリカーノ。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥400</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="meals" class="h-screen">
+            <h2 class="text-xl font-bold p-6 text-center bg-gray-800 text-yellow-400">Meals</h2>
+            <div class="grid gap-6 p-6">
+                <!-- 商品カード -->
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Grilled Cheese</h3>
+                    <p class="text-gray-600">香ばしく焼き上げたチーズトースト。とろけるチーズがたまらない。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥600</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Caesar Salad</h3>
+                    <p class="text-gray-600">新鮮なレタスとクルトン、パルメザンチーズに特製ドレッシング。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥750</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Chicken Wrap</h3>
+                    <p class="text-gray-600">ジューシーなグリルチキンをトルティーヤで包んだボリューム満点の一品。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥800</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sweets" class="h-screen">
+            <h2 class="text-xl font-bold p-6 text-center bg-gray-800 text-yellow-400">Sweets</h2>
+            <div class="grid gap-6 p-6">
+                <!-- 商品カード -->
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Cheesecake</h3>
+                    <p class="text-gray-600">濃厚でなめらかな口どけのベイクドチーズケーキ。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥500</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Chocolate Brownie</h3>
+                    <p class="text-gray-600">しっとりとした食感に濃厚なカカオの香りが広がる逸品。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥480</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Ice Cream Sundae</h3>
+                    <p class="text-gray-600">バニラアイスにチョコソースとナッツをトッピングした贅沢スイーツ。</p>
+                    <p class="text-right text-sm font-bold text-gray-800 mt-2">¥550</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/dropdown.js"></script>
+</body>
+
+</html>
