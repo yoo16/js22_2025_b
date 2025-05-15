@@ -30,8 +30,10 @@ $(function () {
         // スクロール位置が nav の位置を超えたら
         if ($(window).scrollTop() > navPos) {
             // TODO: 固定 css設定：position: fixed
+            $('#nav').css({ position: 'fixed'});
         } else {
             // TODO: 固定解除 css設定：position: static
+            $('#nav').css({ position: 'static'});
         }
     });
 });
