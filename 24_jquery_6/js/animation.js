@@ -72,6 +72,7 @@ $(function () {
     $("#easingBtn").on("click", function () {
         initBox();
         // TODO: box1 を width=300px でアニメーション: easing=linear
+        box1.animate({ width: "300px" }, 1500, "linear")
         // TODO: box2 を width=300px でアニメーション: easing=swing
     })
 
