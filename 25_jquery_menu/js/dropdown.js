@@ -11,6 +11,7 @@ $(function () {
         function () {
             // TODO: 親メニューの子要素 ul を slideDown() アニメーション
             // TODO: アニメーションは一旦停止
+            $(this).children('ul').stop().slideDown(300);
         },
         function () {
             // TODO: 親メニューの子要素 ul を slideUp() アニメーション
