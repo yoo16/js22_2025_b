@@ -12,9 +12,7 @@ $(function () {
     // 初期化処理
     function initMenu() {
         // TODO: css指定：transform: 'translateX(-100%)'
-        $slideMenu.css({
-
-        });
+        $slideMenu.css({ transform: 'translateX(-100%)' });
     }
 
     // スライド処理
