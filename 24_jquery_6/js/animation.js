@@ -8,6 +8,7 @@ $(function () {
 
     $("#showBtn").on("click", function () {
         // TODO: character_1 を show() で表示
+        character_1.show();
     });
 
     $("#hideBtn").on("click", function () {
