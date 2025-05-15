@@ -13,10 +13,12 @@ $(function () {
 
     $("#hideBtn").on("click", function () {
         // TODO: character_1 を hide() で非表示
+        character_1.hide();
     });
 
     $("#toggleBtn").on("click", function () {
         // TODO: character_1 を toggle() でトグル表示
+        character_1.toggle();
     });
 
     $("#fadeInBtn").on("click", function () {
