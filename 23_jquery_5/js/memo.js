@@ -41,6 +41,7 @@ $(function () {
         if (selected.length) {
             const element = newItem();
             // TODO: 選択中の要素の前に追加(before)
+            selected.before(element);
 
             $('#input-text').val('');
         } else {
@@ -52,6 +53,7 @@ $(function () {
         if (selected.length) {
             const element = newItem();
             // TODO: 選択中の要素の後に追加(after)
+            selected.after(element);
 
             $('#input-text').val('');
         } else {
