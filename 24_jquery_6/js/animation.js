@@ -60,8 +60,11 @@ $(function () {
             if (count > 0) {
                 // console.log(element);
                 // TODO: アニメーションで左に揺らす
+                element.animate({ left: "-=" + distance }, delay)
                 // TODO: アニメーションで右に揺らす
+                element.animate({ left: "+=" + distance }, delay)
                 // TODO: コールバックで再帰的に shake() を呼び出す
+                shake(element, count - 1);
             } else {
                 // TODO: 最後に元の位置へ戻す
             }
