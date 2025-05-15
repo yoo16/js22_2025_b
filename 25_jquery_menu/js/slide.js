@@ -19,10 +19,13 @@ $(function () {
     function slideMenu() {
         var x = '0px';
         // TODO: スライドメニューの class=on をトグル
+        $slideMenu.toggleClass('on');
         if ($slideMenu.hasClass('on')) {
             // TODO: x をスライドメニューの幅で設定
+            x = $slideMenu.width() + 'px';
         }
         // TODO: marginLeft に xを設定してアニメーション
+        $slideMenu.animate({ marginLeft: x }, 300);
     }
 
     // スムーススクロール
