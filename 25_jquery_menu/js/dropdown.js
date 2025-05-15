@@ -16,6 +16,7 @@ $(function () {
         function () {
             // TODO: 親メニューの子要素 ul を slideUp() アニメーション
             // TODO: アニメーションは一旦停止
+            $(this).children('ul').delay(300).slideUp(300);
         }
     );
     $navMenus.on('click', function () {
