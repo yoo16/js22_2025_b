@@ -106,6 +106,13 @@ $(function () {
             // TODO: delay().queure() を実行
             // TODO: コールバックで、class=hidden を削除
             // TODO: dequeue()
+            $(this).delay(i * delayTime).queue(function () {
+                $(this).dequeue();
+            }).fadeIn();
+
+            // setTimeout(() => {
+            //     $(this).fadeIn();
+            // }, i * delayTime);
         });
     });
 
