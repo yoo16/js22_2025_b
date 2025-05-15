@@ -71,8 +71,12 @@ $(function () {
     });
 
     $('#item-list').on('click', 'li', function () {
-        // $('#item-list li').removeClass(selectedClass).addClass(unselectedClass);
+        // li要素のクラスを初期化
+        $('#item-list li').removeClass(selectedClass).addClass(unselectedClass);
+        // 選択中の要素のクラスを変更
         $(this).addClass(selectedClass).removeClass(unselectedClass);
         // TODO: 選択
+        selected = $(this);
+        console.log(selected);
     });
 });
