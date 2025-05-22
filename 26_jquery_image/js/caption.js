@@ -43,10 +43,12 @@ $(function () {
     $imageList.on({
         mouseenter: function () {
             // TODO: マウスオーバーでキャプション表示: class=caption
+            $(this).find('.caption').fadeIn(200);
         },
         mouseleave: function () {
             // TODO: マウスアウトでキャプション非表示: class=caption
-        }
+            $(this).find('.caption').fadeOut(200);
+        },
     }, 'li');
 
     loadImages();
