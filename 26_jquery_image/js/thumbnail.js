@@ -1,14 +1,16 @@
 $(function () {
     // TODO: サムネイルクリック: class="thumbnail" の要素を取得
-    // TODO: メイン画像の img をフェードアウト
-    // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
     $(".thumbnail").on("click", function () {
         // TODO: img から 画像パス src を取得
         const src = $(this).attr("src");
         console.log(src);
+        // TODO: メイン画像の img をフェードアウト
+        $("#main-image").fadeOut(300, function () {
+            // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
+            $(this).attr("src", src).fadeIn(300);
+        });
     });
 });
-
 
 // バニラJSの場合
 // document.addEventListener("DOMContentLoaded", function () {
