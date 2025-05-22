@@ -9,6 +9,8 @@ $(function () {
             // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
             $(this).attr("src", src).fadeIn(300);
         });
+        // ダメなパターン
+        // $("#main-image").fadeOut(300).attr("src", src).fadeIn(300);
     });
 });
 
