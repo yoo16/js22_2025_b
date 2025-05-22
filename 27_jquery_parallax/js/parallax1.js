@@ -23,6 +23,7 @@ $(document).ready(function () {
         // TODO: 文字の位置を設定： transform: translateY(translateY px)
         $parallaxContent.css({
             'transform': 'translateY(' + translateY + 'px)',
+            'transform': 'translateX(' + translateY + 'px)',
         });
 
     });
