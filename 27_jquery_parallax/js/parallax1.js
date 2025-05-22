@@ -3,6 +3,14 @@ $(document).ready(function () {
     const $parallaxContent = $('#parallaxContent');
 
     // TODO: スクロール: jqScroll
+    $(window).scroll(function () { 
+        const scrollY = $(this).scrollTop();
+        console.log(scrollY);
+    });
+    // $(window).on('scroll', function () {
+        
+    // });
+
         // TODO: scrollY: スクロール位置を取得し、0.5 をかける
         // jqScrollTopGet
         const scrollY = 0
