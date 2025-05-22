@@ -5,6 +5,7 @@ $(function () {
     function loadImages() {
 
         // TODO: items を繰り返し
+        items.forEach((data) => {
             // --- ここから（繰り返し） ---
             const listItem = `
             <li class="relative group">
@@ -17,12 +18,20 @@ $(function () {
                     <div class="caption p-4">${data.caption}</div>
                 </div>
             </li>`;
+
+            console.log(listItem);
             // TODO: listItem を $imageList に追加
+            $imageList.append(listItem);
             // --- ここまで（繰り返し） ---
+        });
+
 
         // 画像が読み込みイベント
         $('.item').on('load', function () {
             // TODO: ローディングフェードアウト＆削除
+            $(this).siblings('.loading').fadeOut(200, function () {
+                $(this).remove();
+            });
 
             // 画像フェードイン
             $(this).fadeIn(200);
