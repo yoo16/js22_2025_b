@@ -16,10 +16,10 @@ function stackAnimation1() {
     // id=image-container の子 class=stacked-item のスタックリスト取得（画像リスト）
     const images = $('#image-container').children('.stacked-item');
     // TODO: imagesから 最上位のスタック取得: last()
-    const topImage = {}
+    const topImage = images.last();
 
-    $topImage
-        .animate({
+    // 間違えたので、$ をはずして
+    topImage.animate({
             opacity: 0.8,
             left: '100%',
             marginTop: '-50px',
