@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Parallax Effect</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/parallax1.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-gray-900 text-white">
+        <h1 class="text-4xl font-bold">Welcome to Parallax</h1>
+    </section>
+
+    <!-- Parallax Section -->
+    <section id="parallax" class="parallax-bg h-screen relative">
+        <div id="parallaxContent"
+            class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
+            心ほどける、甘くて香ばしいブレイクタイム
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="h-screen bg-gray-100 flex items-center justify-center">
+        <h2 class="text-3xl font-semibold text-gray-800">About</h2>
+    </section>
+
+    <!-- Content Section -->
+    <section class="h-screen bg-green-500 flex items-center justify-center">
+        <h2 class="text-3xl font-semibold text-gray-800">Menu</h2>
+    </section>
+
+    <script src="js/parallax1.js"></script>
+</body>
+
+</html>

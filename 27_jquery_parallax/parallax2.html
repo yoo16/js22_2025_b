@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Parallax Cafe</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/keyframe.css">
+</head>
+
+<body>
+    <header id="header" class="bg-white text-gray-800 text-center py-16">
+        <div class="jump flex items-center justify-center">
+            <img class="shake w-8 h-8 rounded-xl" src="images/logo-cafe.png" alt="Logo">
+            <h1 class="textAnime ml-4 text-4xl font-bold">Parallax Cafe</h1>
+        </div>
+    </header>
+
+    <section id="section1" class="relative flex items-center justify-center h-screen overflow-hidden">
+        <h2
+            class="invisible text-4xl text-black text-center font-bold flex items-center justify-center">
+            心ほどける、甘くて香ばしいブレイクタイム
+        </h2>
+    </section>
+
+    <section id="section2" class="relative flex items-center justify-center h-screen overflow-hidden">
+        <img class="invisible absolute w-full h-full object-cover" src="images/cafe-shop-1.jpg">
+        <h2
+            class="invisible py-6 px-16 text-4xl font-bold text-white bg-black bg-opacity-60 backdrop-filter backdrop-blur-md">
+            Welcome to Parallax Cafe
+        </h2>
+    </section>
+
+    <section id="section3" class="bg-white relative flex items-center justify-center h-screen overflow-hidden">
+        <h2 class="invisible text-4xl text-center font-bold space-y-4">
+            <p>濃厚なチョコレートと</p>
+            <p>クリーミーなホワイトクリームの</p>
+            <p>絶妙なバランス</p>
+        </h2>
+    </section>
+
+    <section id="section4" class="invisible container mx-auto bg-white relative flex md:flex-row flex-col h-screen">
+        <div class="md:w-2/3 w-full pl-5 mb-4">
+            <img class="object-cover rounded-2xl shadow-lg" src="images/item-1.jpg" alt="チョコレートパンケーキ">
+        </div>
+
+        <div class="md:w-1/3 w-full pl-5">
+            <div class="description">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">チョコレートパンケーキ</h2>
+                <p class="text-sm text-gray-600 mb-6">
+                    濃厚なキャラメルソースとイチゴを添えた贅沢なパンケーキ。
+                    <br>
+                    コーヒーとの相性も抜群で、リラックスした時間を提供します。
+                </p>
+                <div class="text-center">
+                    <a href="#buy-now"
+                        class="inline-block bg-green-500 text-white font-bold py-2 px-6 rounded hover:bg-green-600 transition">
+                        今すぐ購入
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/parallax2.js"></script>
+</body>
+
+</html>

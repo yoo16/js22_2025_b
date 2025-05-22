@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Stack View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/stack.css">
+</head>
+
+<body>
+    <header class="text-gray-800 py-8">
+        <h1 class="text-center text-2xl font-bold">Cafe JS</h1>
+    </header>
+    <main id="main">
+        <div id="image-container">
+            <div class="stacked-item">
+                <img class="stacked-image" src="images/item5.jpg">
+            </div>
+            <div class="stacked-item">
+                <img class="stacked-image" src="images/item4.jpg">
+            </div>
+            <div class="stacked-item">
+                <img class="stacked-image" src="images/item3.jpg">
+            </div>
+            <div class="stacked-item">
+                <img class="stacked-image" src="images/item2.jpg">
+            </div>
+            <div class="stacked-item">
+                <img class="stacked-image" src="images/item1.jpg">
+            </div>
+        </div>
+        <div id="btn-area">
+            <div>
+                <button id="next-button1" class="circular-btn">Next</button>
+            </div>
+            <div class="mt-4">
+                <button id="next-button2" class="circular-btn">Next</button>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="js/stack.js"></script>
+</body>
+
+</html>

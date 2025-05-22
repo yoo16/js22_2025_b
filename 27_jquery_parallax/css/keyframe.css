@@ -1,0 +1,377 @@
+.flip {
+    transform-origin: center;
+    transform: perspective(1000px) rotateX(0);
+    opacity: 1;
+}
+
+.flip.is-active {
+    animation: flip 1.0s ease-in-out;
+}
+
+.flipLeft {
+    transform: perspective(1000px) rotateX(0);
+    opacity: 1;
+}
+
+.flipLeft.is-active {
+    animation: flip-left 1.0s ease-in-out;
+}
+
+.shake {
+    transform: rotate(0);
+}
+
+.shake.is-active {
+    animation: shake 2.0s ease-in-out;
+    transform-origin: center;
+}
+
+.dotLine {
+    visibility: hidden;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.dotLine.is-active {
+    visibility: visible;
+    animation: dotLine 1.0s ease-in-out;
+}
+
+.jump {
+    visibility: hidden;
+    transform: scale(1, 1) translateY(0);
+    transform-origin: center;
+}
+
+.jump.is-active {
+    visibility: visible;
+    animation: jump 1.0s ease-in-out;
+}
+
+.slideIn {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.slideIn.is-active {
+    opacity: 1;
+    animation: slideIn 1.0s ease-in-out;
+}
+
+.textAnime {
+    transform: translateY(0);
+}
+
+.textAnime.is-active {
+    animation: textAnime 1.6s ease-in-out;
+}
+
+.swiperStarted {
+    transform: translate(0, 0) rotate(0deg);
+}
+.swiperStarted.is-active {
+    transform: translate(0, 0) rotate(0deg);
+    animation: swiperStarted 1.0s ease-in-out;
+}
+
+.scaleUp {
+    transform: scale(1)
+}
+
+.scaleUp.is-active {
+    animation: scaleUp 1.0s ease-in-out;
+}
+
+.moveLeftOut {
+    animation: moveLeftOut 1.0s ease-in-out;
+}
+
+.moveUpIn {
+    transform: translateY(0%);
+}
+
+.moveUpIn.is-active {
+    animation: moveUpIn 1.0s ease-in-out;
+}
+
+.textFadeUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.textFadeUp.is-active {
+    animation: textFadeUp 1.6s ease-in-out;
+}
+
+.slideBound {
+    transform: scale(1);
+}
+.slideBound.is-active {
+    transform: scale(0.98);
+    animation: slideBound 1.0s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 0;
+}
+.fadeIn.is-active {
+    opacity: 1;
+    animation: fadeIn 1.0s ease-in-out;
+}
+
+.fadeInUp {
+    opacity: 0;
+    transform: translateY(100%);
+}
+.fadeInUp.is-active {
+    opacity: 1;
+    transform: scale(0.95);
+    transform: translateY(0);
+    animation: fadeInUp 1.0s ease-in-out;
+}
+
+.fadeScaleUp {
+    animation: fadeScaleUp 1.6s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0)
+    }
+
+    6%,
+    18%,
+    30%,
+    42% {
+        transform: rotate(15deg)
+    }
+
+    12%,
+    24%,
+    36% {
+        transform: rotate(-15deg)
+    }
+
+    48% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(0)
+    }
+}
+
+@keyframes moveUpIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveLeftOut {
+    0% {
+        transform: translateX(0%)
+    }
+
+    100% {
+        transform: translateX(-200%)
+    }
+}
+
+@keyframes textAnime {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.3em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes textFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-0.3em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBound {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes jump {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1) translateY(10%)
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(0.9, 1.1) translateY(-10%)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05, 0.8) translateY(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0)
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.95);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes swiperStarted {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(500px, -200px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes dotPoint {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes dotLine {
+    0% {
+        opacity: 0;
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    }
+}
+
+@keyframes fadeScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.7)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.06)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+/* Flip Animation */
+@keyframes flip {
+    0% {
+        transform: perspective(1000px) rotateX(0);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateX(360deg);
+    }
+}
+
+@keyframes flip-left {
+    0% {
+        transform: perspective(1000px) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}

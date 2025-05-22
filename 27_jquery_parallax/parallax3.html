@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Parallax World</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/keyframe.css">
+    <link rel="stylesheet" href="css/parallax3.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Nav Menu -->
+    <nav id="nav" class="z-20 py-6 fixed top-0 w-full bg-white bg-opacity-80 backdrop-filter backdrop-blur-md">
+        <h1 class="css-animation fadeIn px-6 text-4xl text-black font-bold">
+            <a href="parallax2.html">Parallax World</a>
+        </h1>
+        <ul class="flex justify-end text-gray-800 font-bold gap-6 px-4">
+            <li class="relative group">
+                <a href="#topic" class="block w-full px-4 hover:text-sky-500">Topics</a>
+            </li>
+            <li class="relative group">
+                <a href="#story" class="block w-full px-4 hover:text-sky-500">Story</a>
+            </li>
+            <li class="relative group">
+                <a href="#characters" class="block w-full px-4 hover:text-sky-500">Characters</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section id="video" class="h-screen flex items-center justify-center text-white bg-white relative overflow-hidden">
+        <!-- TODO: ビデオ固定: class=fixed を追加 -->
+        <video class="top-0 left-0 w-full h-full object-cover" autoplay muted loop>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+        <h1 id="copy"
+            class="type-writer z-10 text-6xl font-bold py-6 px-16 bg-white bg-opacity-30 backdrop-filter backdrop-blur-md rounded-2xl">
+        </h1>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topic"
+        class="css-animation slideBound relative min-h-screen text-black py-6 bg-orange-500 text-white rounded-3xl bg-opacity-80 backdrop-filter backdrop-blur-md">
+        <h2 class="text-4xl font-semibold my-4 text-center p-6">Topics</h2>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+                <!-- Card 1 -->
+                <div
+                    class="css-animation flip bg-white rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                    <img src="images/character_1.png" alt="Character 1" class="mx-auto rounded-t-lg">
+                    <div class="p-3">
+                        <h3 class="text-xl font-bold mb-2 text-black">Topic 1</h3>
+                        <p class="text-gray-600">Description of the first Topic offered.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="css-animation flip bg-white rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                    <img src="images/character_2.png" alt="Character 2" class="mx-auto mb-4 rounded-t-lg">
+                    <div class="p-3">
+                        <h3 class="text-xl font-bold mb-2 text-black">Topic 2</h3>
+                        <p class="text-gray-600">Description of the first Topic offered.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="css-animation flip bg-white rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                    <img src="images/character_3.png" alt="Character 3" class="mx-auto mb-4 rounded-t-lg">
+                    <div class="p-3">
+                        <h3 class="text-xl font-bold mb-2 text-black">Topic 3</h3>
+                        <p class="text-gray-600">Description of the first Topic offered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Image Section -->
+    <section id="story"
+        class="css-animation slideBound relative h-screen text-black py-6 bg-teal-500 text-white rounded-3xl bg-opacity-80 backdrop-filter backdrop-blur-md">
+        <h2 class="css-animation jump text-4xl text-center font-semibold my-4">Story</h2>
+        <div class="css-animation dotLine px-6 text-left text-lg max-w-3xl mx-auto">
+            <p class="py-3">
+            <h2 class="font-bold text-xl">舞台</h2>
+            近未来のメガシティ「ネオ・ルクス」。高度に発展したAIとサイバーネットが人々の生活を支配しているが、その影で「データ犯罪」が急増していた。
+            </p>
+            <p class="py-3">
+            <h2 class="font-bold text-xl">あらすじ</h2>
+            巨大ネットワーク「エデンシステム」にハッキングを試みるNOXの存在が判明。
+            <br>
+            リナはその核心に迫るため、 仲間と共に仮想空間と現実を行き来しながら、隠された真実と対峙していく。
+            <br>
+            やがて明らかになるのは、自身の出生と兄の死に関わる国家の機密。すべてを知った彼女が下す決断とは——。
+            <br>
+            過去に自分の家族が巻き込まれたスキャンダルをきっかけに、表舞台から消えることを決意し、裏方の世界での成功を目指した。
+            </p>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters"
+        class="css-animation slideBound relative h-full text-black py-6 bg-white rounded-3xl text-black bg-opacity-80 backdrop-filter backdrop-blur-md">
+        <h2 class="text-4xl font-semibold text-center py-10 fade-in">Characters</h2>
+        <div class="container mx-auto px-6">
+            <div class="slide-in-y grid grid-cols-1 md:grid-cols-3 gap-8 my-10">
+                <div>
+                    <img src="images/character_1.png" alt="Character 1"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-2xl font-bold mb-2">雪村 澪（ゆきむら みお）</h3>
+                    <p class="text-sm">白銀の世界に佇む少女・澪。人と深く関わるのが少し苦手で、常にひとりで行動することが多い。</p>
+                </div>
+                <div>
+                    <img src="images/character_2.png" alt="Character 2"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-2xl font-bold mb-2">カイ＝ヴァルター</h3>
+                    <p class="text-sm">冷静沈着かつ理知的な若きエリート隊員。幼い頃、サイバーテロによって家族を失い、その真相を追うために警察アカデミーを最年少で卒業。現在は《ブルーレイヴン》（リナ）とコンビを組んで任務にあたる。</p>
+                </div>
+                <div>
+                    <img src="images/character_3.png" alt="Character 3"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-xl font-bold mb-2">リナ＝カザミ</h3>
+                    <p class="text-sm">次世代サイバー警察「S.P.A.R.K.」に所属する精鋭オペレーター。人間離れした解析能力と近接戦闘スキルを併せ持つ。</p>
+                </div>
+            </div>
+            <div class="slide-in-y grid grid-cols-1 md:grid-cols-3 gap-8 my-10">
+                <div>
+                    <img src="images/character_4.png" alt="Character 1"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-2xl font-bold mb-2">黒瀬レン</h3>
+                    <p class="text-sm">都市の地下犯罪ネットワークの撲滅を目的とする若手候補生。過去に「記憶障害」を負っており、失われた自分の過去を追っている。</p>
+                </div>
+                <div>
+                    <img src="images/character_5.png" alt="Character 2"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-2xl font-bold mb-2">綾城ハルカ</h3>
+                    <p class="text-sm">警察学校を首席で卒業し、現場に配属された新星。どこかレンに特別な想いを抱いており、たびたび彼をかばう行動をとる。</p>
+                </div>
+                <div>
+                    <img src="images/character_6.png" alt="Character 3"
+                        class="mx-auto mb-4 w-64 rounded-xl hover:scale-105 transition transform">
+                    <h3 class="text-center text-2xl font-bold mb-2">ミコ（Miko）</h3>
+                    <p class="text-sm">
+                        旧文明の遺跡から発掘された「失われた技術」によって生まれた存在。リナやカイたちのチームに不思議な縁で加わる。
+                        外見は少女だが、世界の秘密を知るキーパーソンでもある。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="z-10 relative h-32 bg-black text-white flex items-center justify-center">
+        <p class="css-animationx">&copy; 2024 Parallax World</p>
+    </footer>
+
+    <script src="js/parallax3.js"></script>
+</body>
+
+</html>
