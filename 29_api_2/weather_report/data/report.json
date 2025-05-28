@@ -1,0 +1,454 @@
+{
+    "reportedAt": "2025/01/19 16:00",
+    "topics": "きょう19日は、西～東日本の太平洋側では雲が広がりやすく雨となる所もあるでしょう。\n西～東日本の日本海側と東北南部は概ね晴れる見込みです。\n東北北部～北海道は雲が多く、所により雪や雨となりそうです。あす20日は西日本太平洋側では概ね晴れるでしょう。\n西日本日本海側と東～北日本は雲が広がり、雨や雪となる所がある見込みです。",
+    "cities": [
+        {
+            "area": 1,
+            "city": "稚内",
+            "temperature_max": 2,
+            "temperature_min": -10,
+            "condition": "snow",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 1,
+            "city": "網走",
+            "temperature_max": 2,
+            "temperature_min": -9,
+            "condition": "snow",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 1,
+            "city": "旭川",
+            "temperature_max": 2,
+            "temperature_min": -12,
+            "condition": "snow",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 1,
+            "city": "釧路",
+            "temperature_max": 0,
+            "temperature_min": -11,
+            "condition": "snow",
+            "precipitationProbability": 50
+        },
+        {
+            "area": 1,
+            "city": "札幌",
+            "temperature_max": 2,
+            "temperature_min": -7,
+            "condition": "snow",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 1,
+            "city": "室蘭",
+            "temperature_max": 6,
+            "temperature_min": 0,
+            "condition": "rainy",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 1,
+            "city": "函館",
+            "temperature_max": 5,
+            "temperature_min": 1,
+            "condition": "rainy",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 2,
+            "city": "青森",
+            "temperature_max": 7,
+            "temperature_min": 0,
+            "condition": "rainy",
+            "precipitationProbability": 70
+        },
+        {
+            "area": 2,
+            "city": "秋田",
+            "temperature_max": 8,
+            "temperature_min": 0,
+            "condition": "snow",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 2,
+            "city": "盛岡",
+            "temperature_max": 9,
+            "temperature_min": -3,
+            "condition": "cloudy",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 2,
+            "city": "仙台",
+            "temperature_max": 7,
+            "temperature_min": -3,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 2,
+            "city": "山形",
+            "temperature_max": 11,
+            "temperature_min": -2,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 2,
+            "city": "福島",
+            "temperature_max": 10,
+            "temperature_min": 0,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 3,
+            "city": "新潟",
+            "temperature_max": 9,
+            "temperature_min": -2,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 3,
+            "city": "水戸",
+            "temperature_max": 13,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 3,
+            "city": "前橋",
+            "temperature_max": 10,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 3,
+            "city": "宇都宮",
+            "temperature_max": 12,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 3,
+            "city": "さいたま",
+            "temperature_max": 12,
+            "temperature_min": 3,
+            "condition": "sunny",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 3,
+            "city": "千葉",
+            "temperature_max": 11,
+            "temperature_min": 2,
+            "condition": "cloudy",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 3,
+            "city": "東京",
+            "temperature_max": 10,
+            "temperature_min": 2,
+            "condition": "cloudy",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 3,
+            "city": "横浜",
+            "temperature_max": 10,
+            "temperature_min": 2,
+            "condition": "cloudy",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 3,
+            "city": "甲府",
+            "temperature_max": 9,
+            "temperature_min": 0,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 3,
+            "city": "長野",
+            "temperature_max": 8,
+            "temperature_min": -3,
+            "condition": "snow",
+            "precipitationProbability": 50
+        },
+        {
+            "area": 4,
+            "city": "富山",
+            "temperature_max": 14,
+            "temperature_min": -1,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 4,
+            "city": "金沢",
+            "temperature_max": 14,
+            "temperature_min": -1,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 4,
+            "city": "福井",
+            "temperature_max": 11,
+            "temperature_min": 1,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 4,
+            "city": "静岡",
+            "temperature_max": 15,
+            "temperature_min": 3,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 4,
+            "city": "名古屋",
+            "temperature_max": 14,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 4,
+            "city": "岐阜",
+            "temperature_max": 13,
+            "temperature_min": 1,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 4,
+            "city": "津",
+            "temperature_max": 15,
+            "temperature_min": 3,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 4,
+            "city": "大津",
+            "temperature_max": 13,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 40
+        },
+        {
+            "area": 4,
+            "city": "奈良",
+            "temperature_max": 13,
+            "temperature_min": 2,
+            "condition": "rainy",
+            "precipitationProbability": 70
+        },
+        {
+            "area": 4,
+            "city": "京都",
+            "temperature_max": 15,
+            "temperature_min": 4,
+            "condition": "sunny",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 4,
+            "city": "大阪",
+            "temperature_max": 14,
+            "temperature_min": 3,
+            "condition": "rainy",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 4,
+            "city": "神戸",
+            "temperature_max": 14,
+            "temperature_min": 3,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 4,
+            "city": "和歌山",
+            "temperature_max": 14,
+            "temperature_min": 4,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 5,
+            "city": "鳥取",
+            "temperature_max": 12,
+            "temperature_min": 2,
+            "condition": "rainy",
+            "precipitationProbability": 60
+        },
+        {
+            "area": 5,
+            "city": "松江",
+            "temperature_max": 12,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 5,
+            "city": "岡山",
+            "temperature_max": 13,
+            "temperature_min": 4,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 5,
+            "city": "広島",
+            "temperature_max": 12,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 5,
+            "city": "山口",
+            "temperature_max": 12,
+            "temperature_min": 2,
+            "condition": "sunny",
+            "precipitationProbability": 0
+        },
+        {
+            "area": 5,
+            "city": "徳島",
+            "temperature_max": 14,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 40
+        },
+        {
+            "area": 5,
+            "city": "高松",
+            "temperature_max": 13,
+            "temperature_min": 4,
+            "condition": "sunny",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 5,
+            "city": "松山",
+            "temperature_max": 14,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 5,
+            "city": "高知",
+            "temperature_max": 15,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 30
+        },
+        {
+            "area": 6,
+            "city": "福岡",
+            "temperature_max": 14,
+            "temperature_min": 4,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 6,
+            "city": "佐賀",
+            "temperature_max": 13,
+            "temperature_min": 6,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 6,
+            "city": "長崎",
+            "temperature_max": 14,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 6,
+            "city": "大分",
+            "temperature_max": 14,
+            "temperature_min": 5,
+            "condition": "cloudy",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 6,
+            "city": "熊本",
+            "temperature_max": 15,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 6,
+            "city": "宮崎",
+            "temperature_max": 16,
+            "temperature_min": 5,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 6,
+            "city": "鹿児島",
+            "temperature_max": 16,
+            "temperature_min": 6,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 7,
+            "city": "名護",
+            "temperature_max": 20,
+            "temperature_min": 15,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 7,
+            "city": "那覇",
+            "temperature_max": 21,
+            "temperature_min": 15,
+            "condition": "sunny",
+            "precipitationProbability": 20
+        },
+        {
+            "area": 7,
+            "city": "宮古島",
+            "temperature_max": 24,
+            "temperature_min": 16,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        },
+        {
+            "area": 7,
+            "city": "石垣島",
+            "temperature_max": 23,
+            "temperature_min": 16,
+            "condition": "sunny",
+            "precipitationProbability": 10
+        }
+    ]
+}

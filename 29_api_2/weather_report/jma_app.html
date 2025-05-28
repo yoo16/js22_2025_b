@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .loader {
+            border-width: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Loading Spinner -->
+    <div id="loading-spinner"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+        <div
+            class="loader border-t-transparent border-4 border-blue-500 border-solid rounded-full w-12 h-12 animate-spin">
+        </div>
+    </div>
+
+    <!-- main -->
+    <main class="container mx-auto p-5">
+        <h1 id="title" class="my-2 text-3xl text-center font-bold mb-2">天気予報</h1>
+
+        <!-- 日時 -->
+        <div class="text-xl text-center font-bold mb-2">
+            <span id="reported-at"></span>
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="p-3 text-center text-red-500"></div>
+
+        <!-- Weather -->
+        <div id="weather-container" class="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        </div>
+
+        <!-- Area -->
+        <div id="center-container" class="grid gap-2 grid-cols md:grid-cols-3"></div>
+    </main>
+
+    <script defer src="js/weatherCodes.js"></script>
+    <script defer src="js/jma_app.js"></script>
+</body>
+
+</html>

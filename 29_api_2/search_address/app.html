@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Address</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <main class="container mx-auto mt-16 p-10 bg-white shadow-lg rounded-lg max-w-2xl">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">住所検索</h2>
+        <div id="error" class="py-2 text-red-800"></div>
+        <!-- 郵便番号 -->
+        <div class="mb-8">
+            <label class="block text-gray-700 font-medium mb-3 text-lg">郵便番号</label>
+            <div class="flex items-center space-x-3">
+                <input onchange="searchHandler()" id="zipcode"
+                    class="form-input border border-gray-300 rounded-lg p-3 flex-grow" type="text"
+                    placeholder="例: 1500001" />
+                <button onclick="searchHandler()"
+                    class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex-shrink-0">
+                    検索
+                </button>
+            </div>
+        </div>
+
+        <!-- 都道府県 -->
+        <div class="mb-8">
+            <label class="block text-gray-700 font-medium mb-3 text-lg">都道府県</label>
+            <select id="prefecture" class="form-select border border-gray-300 rounded-lg p-3 w-full">
+                <option value="">--- 都道府県を選択 ---</option>
+            </select>
+        </div>
+
+        <!-- 市区町村 -->
+        <div class="mb-8">
+            <label class="block text-gray-700 font-medium mb-3 text-lg">市区町村</label>
+            <input id="city" class="form-input border border-gray-300 rounded-lg p-3 w-full" type="text"
+                placeholder="市区町村を入力" />
+        </div>
+    </main>
+
+    <script defer src="js/app.js"></script>
+</body>
+
+</html>

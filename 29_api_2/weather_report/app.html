@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="weather-container mx-auto p-5">
+        <h1 id="title" class="text-3xl text-center font-bold mb-2">全国の天気</h1>
+
+        <!-- 日時 -->
+        <div class="text-xl text-center font-bold mb-2">
+            <span id="reported-at"></span>
+        </div>
+
+        <!-- Topics -->
+        <div id="topics" class="bg-white p-3 text-sm text-gray-800 rounded-lg"></div>
+
+        <!-- Filter -->
+        <div class="flex gap-4 justify-center my-2">
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="">
+                全国
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="1">
+                北海道
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="2">
+                東北
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="3">
+                関東・甲信越
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="4">
+                東海・北陸・近畿
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="5">
+                中国
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="6">
+                九州
+            </button>
+            <button class="filter-btn bg-white px-4 py-2 rounded" data-area="7">
+                沖縄
+            </button>
+        </div>
+
+        <!-- Weather -->
+        <div id="weather-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+
+        <!-- Error -->
+        <div id="error" class="p-3 text-center text-red-500"></div>
+    </div>
+
+    <script defer src="js/app.js"></script>
+</body>
+
+</html>

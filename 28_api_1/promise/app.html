@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カイジの名言</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+    <div class="w-full max-w-xl bg-white p-6 rounded-lg shadow">
+        <h1 class="text-2xl font-bold text-center mb-6">カイジの名言</h1>
+        <div class="text-center mb-4">
+            <button id="fetch-quote-button" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                ざわ...ざわ...
+            </button>
+        </div>
+        <div id="loading" class="text-center text-gray-500 hidden">名言を取得中...</div>
+        <div id="error" class="text-center text-red-500 hidden"></div>
+        <div id="quote" class="mt-4 text-center text-lg font-semibold hidden"></div>
+        <div id="author" class="text-center text-gray-500 hidden"></div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
