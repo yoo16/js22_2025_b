@@ -48,6 +48,8 @@ $(document).ready(function () {
         // TODO: アニメーション
         // css: opacity: 0, width:  0
         // animate: opacity: 1, width: 100%
+        $(selector).css({ opacity: 0, width: 0 })
+                    .animate({ opacity: 1, width: '100%' }, 1000);
     }
 
     // スライド（レフト）
@@ -60,6 +62,8 @@ $(document).ready(function () {
         // TODO: アニメーション
         // css: position: relative, opacity: 0, left: start px
         // animate: opacity: 1, left: end px
+        $(selector).css({ position: 'relative', opacity: 0, left: start })
+                    .animate({ opacity: 1, left: end }, 1000);
     }
 
 });
