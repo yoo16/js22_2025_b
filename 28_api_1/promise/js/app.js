@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const xhr = new XMLHttpRequest();
             // TODO: APIのURLを適切に設定する http://xxxxx/api/quotes.json
             // 同一サーバ: ./api/quotes.json
-            const uri = "";
+            const uri = "./api/quotes.json";
             xhr.open("GET", uri, true);
 
             xhr.onreadystatechange = () => {
