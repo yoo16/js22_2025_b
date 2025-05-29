@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "./api/quotes.json", true);
+            // TODO: APIのURLを適切に設定する http://xxxxx/api/quotes.json
+            // 同一サーバ: ./api/quotes.json
+            const uri = "";
+            xhr.open("GET", uri, true);
 
             xhr.onreadystatechange = () => {
                 if (xhr.readyState !== 4) return;  // 完了前は無視
