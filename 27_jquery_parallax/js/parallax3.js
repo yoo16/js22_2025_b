@@ -29,8 +29,12 @@ $(document).ready(function () {
         const progress = getProgress(target, scrollY)
         if (progress > 0) {
             // TODO: target に class=is-active を追加
+            // keyframes.css のアニメーションを有効化するために必要
+            $(target).addClass('is-active');
         } else {
             // TODO: target に class=is-active を削除
+            // keyframes.css のアニメーションを無効化するために必要
+            $(target).removeClass('is-active');
         }
     }
 
