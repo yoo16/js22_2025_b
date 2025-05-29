@@ -40,9 +40,11 @@ $(document).ready(function () {
 
     // フェードイン
     function fadeIn(target, scrollY) {
-        const progress = getProgress(target, scrollY)
+        // 0.2を引いて、少し遅らせる
+        const progress = getProgress(target, scrollY) - 0.2;
         if (progress > 0 && progress <= 1) {
             // TODO: target に css{ opacity: progress } を追加
+            $(target).css({ opacity: progress });
         }
     }
 
