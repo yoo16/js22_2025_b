@@ -1,8 +1,8 @@
 // JSONデータ読み込み
 var jsonString = document.getElementById('data').textContent;
 
-// TODO: JSON -> オブジェクト
-var user = {};
+// TODO: JSON（テキスト） -> JavaScriptデータ（オブジェクト）
+var user = JSON.parse(jsonString);
 console.log(user)
 displayUser(user);
 
