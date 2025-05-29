@@ -81,6 +81,7 @@ $(document).ready(function () {
             $copy.text(currentText + copyText[typingIndex]);
             typingIndex++;
             // TODO: setTimeout() で、typewriter() を呼び出す
+            setTimeout(typeWriter, typingSpeed);
         }
     }
 
