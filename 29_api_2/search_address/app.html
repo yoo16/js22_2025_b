@@ -17,11 +17,10 @@
         <div class="mb-8">
             <label class="block text-gray-700 font-medium mb-3 text-lg">郵便番号</label>
             <div class="flex items-center space-x-3">
-                <input onchange="searchHandler()" id="zipcode"
-                    class="form-input border border-gray-300 rounded-lg p-3 flex-grow" type="text"
-                    placeholder="例: 1500001" />
-                <button onclick="searchHandler()"
-                    class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex-shrink-0">
+                <input 
+                onchange="searchHandler()"
+                id="zipcode" class="form-input border border-gray-300 rounded-lg p-3 flex-grow" type="text" placeholder="例: 1500001" />
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex-shrink-0">
                     検索
                 </button>
             </div>
@@ -38,8 +37,7 @@
         <!-- 市区町村 -->
         <div class="mb-8">
             <label class="block text-gray-700 font-medium mb-3 text-lg">市区町村</label>
-            <input id="city" class="form-input border border-gray-300 rounded-lg p-3 w-full" type="text"
-                placeholder="市区町村を入力" />
+            <input id="city" class="form-input border border-gray-300 rounded-lg p-3 w-full" type="text" placeholder="市区町村を入力" />
         </div>
     </main>
 

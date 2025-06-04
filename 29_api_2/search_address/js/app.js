@@ -6,13 +6,13 @@ const errorDisplay = document.getElementById('error');
 // 都道府県JSON読み込み
 const loadPrefectures = async () => {
     try {
-        // TODO: 非同期（await）で都道府県JSON読み込み: PREFECTURE_FILE_PATH
+        // TODO: 都道府県JSON読み込み（非同期）: PREFECTURE_FILE_PATH
         const response = {};
         if (!response.ok) {
             errorDisplay.innerHTML = '都道府県読み込みエラー';
             return;
         }
-        // TODO: 非同期（await）でレスポンスされたJSONを、オブジェクトに変換
+        // TODO: レスポンスされたJSONを、オブジェクトに変換（非同期）
         const prefectures = {};
         console.log(prefectures);
 
