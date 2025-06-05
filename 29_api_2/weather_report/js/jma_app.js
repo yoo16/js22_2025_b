@@ -157,6 +157,7 @@ async function displayWeather(officeCode) {
                     <p class="flex justify-center">
                         <img class="w-12 h-12" src="svg/${image}" alt="">
                     </p>
+                    <p class="text-gray-500 text-sm">${weatherName}</p>
                     <p class="text-gray-500">
                         <span class="text-red-500 font-bold">
                         ${temperature[1]}
