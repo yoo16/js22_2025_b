@@ -18,9 +18,9 @@ var offices;
  */
 async function getCenter() {
     try {
-        // API URIの設定
+        // TODO: API URIの設定
         // https://www.jma.go.jp/bosai/common/const/area.json
-        const uri = '';
+        const uri = 'https://www.jma.go.jp/bosai/common/const/area.json';
         const response = await fetch(uri);
         if (!response.ok) {
             displayError("エリア取得に失敗しました");
@@ -40,7 +40,7 @@ async function getForecast(officeCode) {
     try {
         // API URIの設定
         // TODO: API URIの設定: https://www.jma.go.jp/bosai/forecast/data/forecast/xxxxx.json
-        const uri = ``;
+        const uri = `https://www.jma.go.jp/bosai/forecast/data/forecast/${officeCode}.json`;
         console.log(uri)
         // Fetch APIを使用してデータ取得
         const response = await fetch(uri);
