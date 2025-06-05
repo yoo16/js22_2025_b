@@ -11,7 +11,7 @@ async function fetchWeather() {
         const uri = 'data/report.json';
 
         // TODO:APIから非同期でデータ取得: fetch()
-        const response = {};
+        const response = await fetch(uri);
         if (!response.ok) {
             displayError("天気情報の取得に失敗しました");
         }
@@ -39,11 +39,12 @@ async function displayWeather(area = "") {
             return;
         }
 
+        // reportedAtContainer = document.getElementById('reported-at')
         // TODO: 日時表示: weatherData.reportedAt
-        reportedAtContainer.innerHTML;
+        reportedAtContainer.innerHTML = weatherData.reportedAt;
 
         // TODO: トピック表示: weatherData.topics
-        topicContainer.innerHTML;
+        topicContainer.innerHTML = weatherData.topics;
 
         // 天気カード生成
         cities.forEach(({ city, temperature_max, temperature_min, condition, precipitationProbability }) => {
