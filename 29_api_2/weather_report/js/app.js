@@ -58,9 +58,9 @@ async function displayWeather(area = "") {
                     <img class="w-12 h-12" src="images/.png" alt="">
                 </p>
                 <p class="text-gray-500">
-                    <span class="text-red-500 font-bold"></span>
+                    <span class="text-red-500 font-bold">${temperature_max}</span>
                     /
-                    <span class="text-blue-500 font-bold"></span>
+                    <span class="text-blue-500 font-bold">${temperature_min}</span>
                 </p>
                 <p class="text-gray-500">%</p>
             `;
