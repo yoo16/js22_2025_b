@@ -38,12 +38,13 @@ const renderPrefectures = (prefectures) => {
     })
 }
 
-// 郵便番号検索
+// 郵便番号検索（非同期）
 const searchAddress = async (zipcode) => {
     try {
         const query_param = new URLSearchParams({ zipcode: zipcode, })
         // TODO: SEARCH_URI に zipcode を追加
-        const uri = SEARCH_URI;
+        // https://zipcloud.ibsnet.co.jp/api/search?zipcode=1234567
+        const uri = SEARCH_URI + '?' + query_param.toString();
         console.log(uri);
         // TODO: 郵便番号検索APIにアクセス（非同期）
         const response = {};
