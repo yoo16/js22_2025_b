@@ -44,6 +44,7 @@ async function loadPokemonByName(name) {
         if (!res.ok) throw new Error('ポケモンが見つかりませんでした');
 
         const data = await res.json();
+        console.log(data);
         result.innerHTML = `
             <div class="grid grid-cols-1 gap-4">
                 ${createPokemonCard(data, data.id)}
