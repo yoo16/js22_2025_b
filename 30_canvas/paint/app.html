@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ペイント</title>
+    <!-- Tailwind CSS の CDN 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center p-4">
+    <!-- タイトル -->
+    <h1 class="text-3xl font-bold mt-4 mb-6">おえかき</h1>
+
+    <!-- コントロール群 -->
+    <div class="mb-4 flex flex-col sm:flex-row gap-4 items-center">
+        <!-- 色の選択 -->
+        <div class="flex items-center gap-2">
+            <input type="color" id="colorPicker" value="#3490dc" class="border border-gray-300 rounded p-1">
+        </div>
+        <!-- 消しゴムの選択 -->
+        <div class="flex items-center gap-2">
+            <button id="eraserButton" class="bg-white font-bold py-1 px-2 rounded">
+                消しゴム
+            </button>
+
+        </div>
+        <!-- 線の太さの選択 -->
+        <div class="flex items-center gap-2">
+            <input type="range" id="lineWidth" min="1" max="50" value="3" class="w-32">
+            <span id="lineWidthValue" class="w-6 text-center">3</span>
+        </div>
+        <!-- リセットボタン -->
+        <button id="resetButton" class="bg-red-500 text-white px-4 py-2 rounded :hoverbg-red-600 focus:outline-none">
+            リセット
+        </button>
+        <!-- ダウンロードボタン -->
+        <button id="downloadButton"
+            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">
+            ダウンロード
+        </button>
+    </div>
+
+    <!-- Canvas 要素 -->
+    <canvas id="drawCanvas" class="border border-gray-300 bg-white shadow-lg" width="600" height="400"></canvas>
+
+    <!-- 外部 JavaScript の読み込み -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
