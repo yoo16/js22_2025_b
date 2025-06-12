@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>東京グルメマップ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen text-gray-900">
+    <div class="max-w-4xl mx-auto px-4 py-6">
+        <!-- ヘッダー -->
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-extrabold tracking-tight text-gray-800">🍽 東京グルメマップ</h1>
+        </header>
+
+        <!-- カテゴリ選択 -->
+        <div class="flex flex-wrap items-center gap-3 mb-5">
+            <select id="categorySelect"
+                class="p-2 px-4 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none bg-white text-gray-800">
+                <option value="all">すべてのカテゴリ</option>
+                <!-- JSで動的に追加 -->
+            </select>
+        </div>
+
+        <!-- マップ -->
+        <div id="map" class="rounded-xl shadow-lg border border-gray-300 h-[600px] overflow-hidden"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

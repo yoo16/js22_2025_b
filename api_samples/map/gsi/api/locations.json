@@ -1,0 +1,34 @@
+[
+    {
+        "name": "寿司大（築地）",
+        "lat": 35.6655,
+        "lng": 139.7708,
+        "category": "sushi",
+        "review": "新鮮で絶品の寿司が味わえます。朝早くから行列必至。",
+        "link": "https://tabelog.com/tokyo/A1313/A131301/13002314/"
+    },
+    {
+        "name": "一蘭（新宿）",
+        "lat": 35.6938,
+        "lng": 139.7034,
+        "category": "ramen",
+        "review": "とんこつラーメンの定番。仕切りがあるので集中して食べられる。",
+        "link": "https://ichiran.com/shop/tokyo/shinjuku/"
+    },
+    {
+        "name": "カフェ・ド・ランブル（銀座）",
+        "lat": 35.6702,
+        "lng": 139.7651,
+        "category": "cafe",
+        "review": "老舗の喫茶店で、香り高い珈琲が楽しめます。",
+        "link": "https://tabelog.com/tokyo/A1301/A130103/13002564/"
+    },
+    {
+        "name": "焼肉ジャンボ（本郷）",
+        "lat": 35.7074,
+        "lng": 139.7596,
+        "category": "yakiniku",
+        "review": "上質な肉が揃った焼肉店。予約必須の人気店。",
+        "link": "https://tabelog.com/tokyo/A1310/A131004/13110601/"
+    }
+]
