@@ -1,6 +1,8 @@
 // TODO: 緯度・経度の設定
-const lat = 0; // 東京駅の緯度: 35.6812
-const lng = 0; // 東京駅の経度: 139.7671
+const lat = 35.6812; // 東京駅の緯度: 35.6812
+const lng = 139.7671; // 東京駅の経度: 139.7671
+// Leafletの地図を初期化: id="map" の要素を使用
+// setView() で初期表示位置とズームレベルを設定
 const map = L.map("map").setView([lat, lng], 12);
 
 // Leafletのタイルレイヤーを追加
