@@ -55,10 +55,13 @@ function draw(x, y) {
 
     // TODO: 前回の位置から現在の位置まで線を描画
     // beginPath() で新しいパスを開始
+    ctx.beginPath();
     // moveTo() で前回の位置に移動
+    ctx.moveTo(lastX, lastY);
     // lineTo() で現在の位置まで線を引く
+    ctx.lineTo(x, y);
     // stroke() でパスを描画
-
+    ctx.stroke();
     // 座標を更新
     [lastX, lastY] = [x, y];
 }
