@@ -87,10 +87,10 @@ function renderMarkers(locations) {
         `;
 
         // TODO: マーカー追加
-        // const marker = L.marker([loc.lat, loc.lng], { icon })
-        //     .addTo(map)
-        //     .bindPopup(popupContent);
-        // allMarkers.push(marker);
+        const marker = L.marker([loc.lat, loc.lng], { icon })
+            .addTo(map)
+            .bindPopup(popupContent);
+        allMarkers.push(marker);
     });
 }
 
