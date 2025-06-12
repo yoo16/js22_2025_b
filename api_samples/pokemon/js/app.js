@@ -12,16 +12,18 @@ async function loadPokemon() {
     const usedIds = new Set();
 
     while (usedIds.size < displayPokemonCount) {
+        // ランダムなポケモンIDを生成
         const id = Math.floor(Math.random() * maxPokemonCount) + 1;
         if (usedIds.has(id)) continue;
         usedIds.add(id);
 
         try {
             // TODO: API URL: https://pokeapi.co/api/v2/pokemon/{id}
-            const uri = ``;
+            const uri = `https://pokeapi.co/api/v2/pokemon/${id}`;
+            // APIからポケモンデータを取得
             const res = await fetch(uri);
             if (!res.ok) continue;
-
+            // レスポンスをJSON形式でパース
             const data = await res.json();
             html += createPokemonCard(data, id);
         } catch (e) {
