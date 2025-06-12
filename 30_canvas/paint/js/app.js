@@ -9,7 +9,7 @@ const downloadButton = document.getElementById('downloadButton');
 // canvas 要素と描画コンテキストの取得
 const canvas = document.getElementById('drawCanvas');
 // TODO: 2Dコンテキスト作成
-const ctx = {};
+const ctx = canvas.getContext('2d');
 
 // 描画状態を管理する変数
 let isDrawing = false;
