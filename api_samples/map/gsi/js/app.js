@@ -79,11 +79,11 @@ function renderMarkers(locations) {
         // TODO: データバインディング
         const popupContent = `
             <div class="text-center">
-                <strong></strong>
+                <strong>${name}</strong>
                 <span class="text-xs text-gray-700">${categoryLabel}</span>
             </div>
-            <p class="text-sm mt-1"></p>
-            <a href="" target="_blank" class="text-blue-500 underline text-sm mt-2 inline-block">詳細</a>
+            <p class="text-sm mt-1">${review}</p>
+            <a href="${link}" target="_blank" class="text-blue-500 underline text-sm mt-2 inline-block">詳細</a>
         `;
 
         // TODO: マーカー追加
