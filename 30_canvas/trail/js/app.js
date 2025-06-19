@@ -38,12 +38,15 @@ function animate() {
     // トレイル効果
     // TODO: (2) 各フレームで、完全に消去せずに半透明の黒で上書きする
     // fillStyle : rgba(0, 0, 0, 0.1)
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
     ctx.fillRect(0, 0, w, h);
 
     for (const dot of dots) {
         // TODO: (3) ドット座標更新 update() を実行
+        dot.update();
 
         // TODO: (4) ドット描画 draw() を実行
+        dot.draw();
     }
 
     // 各ドットの間の線を描画
