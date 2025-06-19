@@ -24,8 +24,8 @@ function spawnFace(event) {
     let y = event.clientY;
 
     // TODO: ランダムスピード: (Math.random() - 0.5) * 8
-    let speedX = 0;
-    let speedY = 0;
+    let speedX = (Math.random() - 0.5) * 8;
+    let speedY = (Math.random() - 0.5) * 8;
 
     // 新しい顔文字作成
     faces.push(new Face(x, y, speedX, speedY));
@@ -36,7 +36,7 @@ function spawnFace(event) {
  */
 function animate() {
     // TODO: 現在のコンテキストの描画クリア
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 顔文字の移動（複数同時）
     faces.forEach(face => {
