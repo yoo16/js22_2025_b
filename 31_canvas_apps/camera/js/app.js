@@ -39,8 +39,8 @@ const countdownAudio = new Audio('audio/countdown.wav');
 let audioEnabled = true;
 
 // TODO: 合成用フレーム画像オブジェクト
-// const overlayFrame = new Image();
-// overlayFrame.src = currentFrameSrc;
+const overlayFrame = new Image();
+overlayFrame.src = currentFrameSrc;
 
 /**
  * 合成用の Canvas を作成し、DOM へ追加
@@ -61,8 +61,8 @@ function createCompositeCanvas() {
  */
 const onCamera = async () => {
     // TODO: カメラの有効化処理を実装
-    // const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    // video.srcObject = stream;
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    video.srcObject = stream;
 };
 
 /**
