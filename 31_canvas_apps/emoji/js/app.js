@@ -46,7 +46,7 @@ function animate() {
     // 衝突チェック
     checkCollisions();
 
-    // フレームアニメーション
+    // フレームアニメーション：ずっと animate() を呼び出す
     requestAnimationFrame(animate);
 }
 
