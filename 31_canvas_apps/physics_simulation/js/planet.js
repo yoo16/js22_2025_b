@@ -139,9 +139,9 @@ function animate() {
         camera.lookAt(zoomLookAt);
     } else if (trackedPlanet) {
         // TODO: ズーム完了後に惑星を追跡
-        // const offset = new THREE.Vector3(0, 10, 20);
-        // camera.position.copy(trackedPlanet.mesh.position).add(offset);
-        // camera.lookAt(trackedPlanet.mesh.position);
+        const offset = new THREE.Vector3(0, 10, 20);
+        camera.position.copy(trackedPlanet.mesh.position).add(offset);
+        camera.lookAt(trackedPlanet.mesh.position);
     }
     // レンダリング
     renderer.render(scene, camera);
