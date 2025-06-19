@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="container m-auto">
+        <div id="gpu-info" class="p-4">
+            <h2>GPU Info</h2>
+            <p id="error-message"></p>
+            <ul>
+                <li><span id="webgl-version"></span></li>
+                <li><span id="gpu-renderer"></span></li>
+                <li><span id="gpu-vendor"></span></li>
+            </ul>
+        </div>
+        <canvas id="canvas"></canvas>
+    </main>
+
+    <script src="js/info.js" defer></script>
+</body>
+
+</html>

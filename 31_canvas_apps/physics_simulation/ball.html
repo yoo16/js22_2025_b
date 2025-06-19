@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ball Physics Simulation with External Sliders</title>
+    <!-- p5.js ライブラリの読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- HTML 側のコントロール（ボタン＆スライダー） -->
+    <div id="controls" class="fixed top-4 left-4 bg-white/80 p-4 border border-gray-300 rounded shadow z-50 space-y-4">
+        <div class="flex space-x-2">
+            <button id="startButton"
+                class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none">Start</button>
+            <button id="resetButton"
+                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none">Reset</button>
+        </div>
+        <div class="flex items-center space-x-2">
+            <label for="gravitySlider" class="font-medium text-gray-700">Gravity:</label>
+            <input type="range" id="gravitySlider" min="0" max="2" step="0.01" value="0.5" class="w-32">
+            <span id="gravityValue" class="w-12 text-right">0.50</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <label for="restitutionSlider" class="font-medium text-gray-700">Restitution:</label>
+            <input type="range" id="restitutionSlider" min="0" max="1" step="0.01" value="0.8" class="w-32">
+            <span id="restitutionValue" class="w-12 text-right">0.80</span>
+        </div>
+
+        <div id="status" class="p-4 border border-gray-300 rounded shadow z-50 text-sm">
+        </div>
+    </div>
+
+    <!-- Ball クラスなどのスクリプト -->
+    <script src="js/Ball.js"></script>
+    <script src="js/ball_app.js"></script>
+</body>
+
+</html>

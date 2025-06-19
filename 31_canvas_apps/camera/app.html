@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evacuation Face Recognition</title>
+    <!-- Tailwind CSS の CDN 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- ローディングモーダル -->
+    <div id="loadingModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <p class="text-lg font-semibold">Processing...</p>
+        </div>
+    </div>
+
+    <!-- 画像表示モーダル（キャプチャ後の画像を表示） -->
+    <div id="imageModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <div class="bg-white p-4 rounded-lg flex flex-col items-center">
+            <img id="capturedImage" src="" alt="Captured Image" class="max-w-full max-h-full">
+            <div class="mt-4 flex space-x-4">
+                <button id="downloadImage" class="border-sky-500 text-sky-500 border px-3 py-2 rounded-md">
+                    Download
+                </button>
+                <button id="closeImageModal" class="border-sky-500 text-sky-500 border px-3 py-2 rounded-md">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- カウントダウン用オーバーレイ -->
+    <div id="countdownOverlay" class="hidden fixed inset-0 flex items-center justify-center">
+        <div id="countdownCircle"
+            class="w-32 h-32 rounded-full bg-sky-500 bg-opacity-100 border-4 border-white flex items-center justify-center text-6xl text-white">
+        </div>
+    </div>
+
+    <div class="container mx-auto p-2">
+        <div id="video-area" class="flex flex-col items-center">
+            <input type="file" id="photo" class="hidden" />
+
+            <!-- ビデオタグ -->
+            <video id="video" width="640" height="480" autoplay class="hidden rounded-lg mt-4"></video>
+
+            <!-- 音声のON/OFF切替ボタン -->
+            <button id="toggleAudioBtn" type="button"
+                class="text-xs border-sky-500 text-sky-500 border px-2 py-1 rounded-md">
+                Audio ON
+            </button>
+            <!-- フレーム選択：サムネイルで -->
+            <div id="frameThumbnails" class="m-4 flex space-x-4">
+                <img src="images/frame1.png" data-frame="images/frame1.png" alt="Frame 1"
+                    class="frame-thumbnail border-2 border-transparent hover:border-blue-500 w-16 h-16 object-cover rounded cursor-pointer">
+                <img src="images/frame2.png" data-frame="images/frame2.png" alt="Frame 2"
+                    class="frame-thumbnail border-2 border-transparent hover:border-blue-500 w-16 h-16 object-cover rounded cursor-pointer">
+                <img src="images/frame3.png" data-frame="images/frame3.png" alt="Frame 3"
+                    class="frame-thumbnail border-2 border-transparent hover:border-blue-500 w-16 h-16 object-cover rounded cursor-pointer">
+                <img src="images/frame4.png" data-frame="images/frame4.png" alt="Frame 4"
+                    class="frame-thumbnail border-2 border-transparent hover:border-blue-500 w-16 h-16 object-cover rounded cursor-pointer">
+            </div>
+            <div class="mt-4 flex">
+                <button id="capture-btn" type="button" class="bg-sky-500 text-white px-3 py-2 rounded-md">
+                    写真を撮る
+                </button>
+            </div>
+        </div>
+        <!-- 合成用 Canvas 表示エリア -->
+        <div id="canvas-area" class="flex justify-center mt-6"></div>
+    </div>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>
