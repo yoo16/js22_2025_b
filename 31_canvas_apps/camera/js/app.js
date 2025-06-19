@@ -140,8 +140,8 @@ captureBtn.addEventListener('click', () => {
 frameThumbnails.forEach(thumb => {
     thumb.addEventListener('click', () => {
         // TODO: クリックされたサムネイルからフレーム画像のパスを取得
-        // currentFrameSrc = thumb.dataset.frame;
-        // overlayFrame.src = currentFrameSrc;
+        currentFrameSrc = thumb.dataset.frame;
+        overlayFrame.src = currentFrameSrc;
 
         // 選択中のサムネイルにスタイルを適用
         frameThumbnails.forEach(t => t.classList.remove('border-blue-500'));
