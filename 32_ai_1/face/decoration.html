@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tensorflow.js - Face Detection</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TensorFlow.js Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <!-- MediaPipe Face Mesh -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+  <!-- Face Landmarks Detection -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+  <!-- Three.js via importmap -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto">
+    <div class="relative w-[640px] h-[480px] mx-auto border border-gray-300 shadow-lg">
+      <!-- Webカメラ映像（左右反転） -->
+      <video id="video" class="absolute inset-0 w-full h-full object-cover transform scale-x-[-1]" autoplay muted
+        playsinline loop></video>
+      <!-- 検出結果を描画するキャンバス -->
+      <canvas id="canvas" class="absolute inset-0 w-full h-full pointer-events-none transform scale-x-[-1]"></canvas>
+    </div>
+
+    <!-- ボタン群 -->
+    <div class="mt-6 flex flex-col items-center space-y-4">
+      <!-- スタンプ位置調整用ボタン（動的生成） -->
+      <div class="position-buttons flex space-x-3"></div>
+
+      <!-- スタンプ切替ボタン（動的生成） -->
+      <ul class="image-buttons flex space-x-4"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="js/decoration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tensorflow.js - Face Detection</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TensorFlow.js Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <!-- MediaPipe Face Mesh -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+  <!-- Face Landmarks Detection -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-4">Tensorflow.js - Face Detection</h1>
+
+    <!-- 顔顔部のnプルダウン-->
+    <div class="text-center mb-4">
+      <select id="partSelect" class="border p-2"></select>
+    </div>
+
+    <div class="relative w-[640px] h-[480px] mx-auto">
+      <!-- Webカメラ映像 -->
+      <video id="video" class="absolute inset-0 w-full h-full object-cover transform" autoplay muted playsinline
+        loop></video>
+      <!-- 検出結果描画キャンバス -->
+      <canvas id="canvas" class="absolute inset-0 w-full h-full pointer-events-none transform"></canvas>
+    </div>
+
+    <div class="flex flex-col justify-center items-center my-4">
+      <div id="message" class="text-green-600 p-2"></div>
+      <img src="images/tfjs_mesh_map.jpg" class="w-full">
+    </div>
+  </div>
+
+  <script src="js/landmarkParts.js"></script>
+  <script src="js/recognition.js"></script>
+</body>
+
+</html>

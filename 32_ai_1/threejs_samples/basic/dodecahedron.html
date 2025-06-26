@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=640, initial-scale=1.0" />
+    <title>Dodecahedron Geometry with Controls</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js をモジュールとして読み込むための importmap -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+
+<body class="">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-4">DodecahedronGeometry</h1>
+        <div class="flex flex-col md:flex-row gap-4 h-screen">
+            <!-- 左側：Canvas表示領域 -->
+            <div id="canvas-container" class="w-3/4"></div>
+            <!-- 右側：コントロールパネル -->
+            <div class="w-1/4 p-4 border-l border-gray-300 space-y-4">
+                <div>
+                    <h2 class="font-bold mb-2">DodecahedronGeometry</h2>
+                    <div>
+                        <label for="radiusSlider" class="block text-sm">
+                            Radius: <span id="radiusValue">1</span>
+                        </label>
+                        <input type="range" id="radiusSlider" min="0.1" max="10" step="0.1" value="1" class="w-full">
+                    </div>
+                    <div>
+                        <label for="detailSlider" class="block text-sm">
+                            Detail: <span id="detailValue">0</span>
+                        </label>
+                        <input type="range" id="detailSlider" min="0" max="3" step="1" value="0" class="w-full">
+                    </div>
+                    <!-- トグルボタンでワイヤーフレーム切替 -->
+                    <div class="flex">
+                        <label class="block text-sm">Wireframe</label>
+                        <button id="wireframeToggle"
+                            class="text-xs bg-blue-500 text-white mx-2 p-2 rounded">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 各モジュールの読み込み -->
+    <script type="module" src="js/Light.js" defer></script>
+    <script type="module" src="js/dodecahedron.js" defer></script>
+</body>
+
+</html>

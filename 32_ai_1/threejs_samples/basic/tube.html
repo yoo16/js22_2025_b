@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=640, initial-scale=1.0" />
+    <title>Tube Geometry with Controls</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js をモジュールとして読み込むための importmap -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+
+<body class="">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">TubeGeometry</h1>
+        <div class="flex flex-col md:flex-row gap-4 h-screen">
+            <!-- 左側：Canvas表示領域 -->
+            <div id="canvas-container" class="w-3/4"></div>
+            <!-- 右側：コントロールパネル -->
+            <div class="w-full md:w-1/4 p-4 border-l border-gray-300 space-y-4">
+                <div>
+                    <h2 class="font-bold mb-2">Tube Parameters</h2>
+                    <div>
+                        <label for="tubularSegSlider" class="block text-sm">
+                            Tubular Segments: <span id="tubularSegValue">64</span>
+                        </label>
+                        <input type="range" id="tubularSegSlider" min="1" max="200" step="1" value="64" class="w-full">
+                    </div>
+                    <div>
+                        <label for="tubeRadiusSlider" class="block text-sm">
+                            Tube Radius: <span id="tubeRadiusValue">2</span>
+                        </label>
+                        <input type="range" id="tubeRadiusSlider" min="0.1" max="10" step="0.1" value="2"
+                            class="w-full">
+                    </div>
+                    <div>
+                        <label for="radialSegSlider" class="block text-sm">
+                            Radial Segments: <span id="radialSegValue">8</span>
+                        </label>
+                        <input type="range" id="radialSegSlider" min="1" max="20" step="1" value="8" class="w-full">
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label class="block text-sm">Closed:</label>
+                        <button id="closedToggle" class="text-xs bg-blue-500 text-white p-2 rounded">OFF</button>
+                    </div>
+                    <!-- ワイヤーフレーム切替 -->
+                    <div class="flex items-center space-x-2">
+                        <label class="block text-sm">Wireframe:</label>
+                        <button id="wireframeToggle" class="text-xs bg-blue-500 text-white p-2 rounded">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 各モジュールの読み込み -->
+    <script type="module" src="js/Light.js" defer></script>
+    <script type="module" src="js/CustomSinCurve.js" defer></script>
+    <script type="module" src="js/tube.js" defer></script>
+</body>
+
+</html>
