@@ -227,10 +227,10 @@ function updatemesh() {
     const position = landmark[settings.point];
 
     // TODO: 顔の右端・左端・額・下顎のランドマークを取得
-    const leftFace = {};  // 左端: 454
-    const rightFace = {}; // 右端: 234
-    const forehead = {};   // 額の中心: 10
-    const chin = {};      // 下顎: 152
+    const leftFace = landmark[454];  // 左端: 454
+    const rightFace = landmark[234]; // 右端: 234
+    const forehead = landmark[10];   // 額の中心: 10
+    const chin = landmark[152];      // 下顎: 152
 
     // 顔の横幅（3D距離）
     const faceWidth = Math.sqrt(
@@ -286,11 +286,11 @@ function calculateNormalVector() {
     // ランドマーク取得
     const landmark = fixLandmarkValue(results[0].keypoints);
     // TODO: 鼻の先端のキーポイント: 1
-    const noseTip = {};
+    const noseTip = landmark[1];
     // TODO: 鼻の左端のキーポイント: 279
-    const leftNose = {};
+    const leftNose = landmark[279];
     // TODO: 鼻の右端のキーポイント: 49
-    const rightNose = {};
+    const rightNose = landmark[49];
 
     // 鼻の中央を計算（x, y, z）
     const midpoint = {
