@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Menu</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto py-6 text-center">
+            <h1 id="title" class="text-4xl font-bold text-gray-800"></h1>
+            <p id="description" class="text-gray-600 mt-2"></p>
+        </div>
+        <!-- Menu Button -->
+        <div class="container mx-auto text-right p-4">
+            <button onclick="showCart()" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+                Cart
+                <span id="cartCount" class="bg-white text-yellow-500 rounded-full px-2 py-1 ml-2">0</span>
+            </button>
+            <button onclick="showOrderHistory()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">
+                Order History
+            </button>
+        </div>
+    </header>
+
+    <!-- Flash Message Section (フラッシュメッセージを表示する要素) -->
+    <div id="flashMessage" class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg hidden">
+        <!-- メッセージがここに表示されます -->
+    </div>
+
+    <!-- Menu Section -->
+    <main class="container mx-auto py-12 px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">Our Menu</h2>
+        <div id="menuItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- JavaScript will generate menu items here -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto text-center text-white">
+            <p id="copy-right"></p>
+        </div>
+    </footer>
+
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+            <h3 class="text-2xl font-bold mb-4">Your Cart</h3>
+            <ul id="cartItemsList" class="mb-4">
+                <!-- Cart items will be added here -->
+            </ul>
+            <p class="text-xl font-semibold mb-4">Total: $<span id="cartTotal">0.00</span></p>
+            <div class="flex justify-between">
+                <button id="checkoutButton" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" onclick="checkout()">
+                    Checkout
+                </button>
+                <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600" onclick="closeCart()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order History Modal -->
+    <div id="orderHistoryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+            <h3 class="text-2xl font-bold mb-4">Order History</h3>
+            <ul id="orderHistoryList" class="mb-4">
+                <!-- Order history items will be added here -->
+            </ul>
+            <div class="flex justify-end">
+                <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600" onclick="closeOrderHistory()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
