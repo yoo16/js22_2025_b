@@ -38,7 +38,7 @@ let positionY = 0;
 const depthStrength = 200;
 // 法線のオフセット
 const zOffset = 300;
-
+// Three.jsのシーン、カメラ、レンダラー
 let scene, camera, renderer;
 
 // Three.jsの初期設定を行う関数
@@ -190,10 +190,10 @@ function createDecoPlane() {
     });
 
     // TODO: メッシュの追加
-    // mesh = new THREE.Mesh(geometry, material);
-    // mesh.scale.set(settings.scale, settings.scale, 0);
-
-    // scene.add(mesh);
+    mesh = new THREE.Mesh(geometry, material);
+    mesh.scale.set(settings.scale, settings.scale, 0);
+    // シーンにメッシュ（マスク画像）を追加
+    scene.add(mesh);
 }
 
 // スタンププレーンを更新する関数
