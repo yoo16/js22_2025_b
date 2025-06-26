@@ -77,9 +77,9 @@ function drawResults(faces) {
                     // TODO: ランドマークの座標をキャンバスに描画
                     // X座標 * キャンバスの幅 / ビデオの幅
                     // Y座標 * キャンバスの高さ / ビデオの高さ
-                    const x = 0;
-                    const y = 0;
-
+                    const x = point.x * canvasEl.width / videoWidth;
+                    const y = point.y * canvasEl.height / videoHeight;
+                    // console.log(`Landmark index: ${index}, x: ${x}, y: ${y}`);
                     // 点を描画
                     ctx.beginPath();
                     ctx.arc(x, y, 1, 0, 2 * Math.PI);
