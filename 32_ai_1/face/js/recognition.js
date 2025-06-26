@@ -54,8 +54,8 @@ async function setupCamera() {
 async function detectFace() {
     const estimationConfig = { flipHorizontal: false };
     // TODO: 顔検出を実装
-    // const faces = await detector.estimateFaces(videoEl, estimationConfig);
-    // return faces;
+    const faces = await detector.estimateFaces(videoEl, estimationConfig);
+    return faces;
 }
 
 /**
