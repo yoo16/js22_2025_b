@@ -180,6 +180,7 @@ function showPostureResult(isHeadDropping) {
         if (isBadPosture) {
             updateMessage('姿勢わるくない？', 'bg-red-500', 'text-white');
             // TODO: 音声再生
+            playAudio(now);
         } else {
             updateMessage('うつむき', 'bg-orange-300', 'text-orange-800');
         }
