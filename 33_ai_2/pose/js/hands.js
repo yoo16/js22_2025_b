@@ -123,7 +123,7 @@ function isThumbExtended(keypoints) {
     const angle = Math.acos(cosAngle) * (180 / Math.PI);
 
     // TODO: 角度が一定以上なら「伸びている」と判定
-    return angle < 0;
+    return angle < 50;
 }
 
 /**
