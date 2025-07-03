@@ -37,7 +37,7 @@ async function loadModel() {
 function drawKeypoints(keypoints) {
     for (const keypoint of keypoints) {
         // TODO: キーポイントのスコアが0.4以上なら描画
-        if (keypoint.score > 1.0) {
+        if (keypoint.score > 0.4) {
             ctx.beginPath();
             ctx.arc(keypoint.x, keypoint.y, 5, 0, 2 * Math.PI);
             ctx.fillStyle = 'red';
