@@ -74,12 +74,12 @@ function drawHand(keypoints) {
 
     // TODO: 関節点
     keypoints.forEach(point => {
-        // const x = point.x * canvas.width / video.videoWidth;
-        // const y = point.y * canvas.height / video.videoHeight;
-        // ctx.beginPath();
-        // ctx.arc(x, y, 3, 0, 2 * Math.PI);
-        // ctx.fillStyle = 'red';
-        // ctx.fill();
+        const x = point.x * canvas.width / video.videoWidth;
+        const y = point.y * canvas.height / video.videoHeight;
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = 'red';
+        ctx.fill();
     });
 }
 
