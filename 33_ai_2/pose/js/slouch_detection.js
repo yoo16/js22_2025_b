@@ -176,7 +176,7 @@ function showPostureResult(isHeadDropping) {
         // 開始時間を更新
         if (!badPostureStart) badPostureStart = now;
         // TODO: 10秒以上続いている場合は悪い姿勢と判断
-        const isBadPosture = false;
+        const isBadPosture = (now - badPostureStart) > BAD_POSTURE_THRESHOLD;
         if (isBadPosture) {
             updateMessage('姿勢わるくない？', 'bg-red-500', 'text-white');
             // TODO: 音声再生
