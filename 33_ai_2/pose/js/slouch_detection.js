@@ -1,7 +1,7 @@
 const messageDisplay = document.getElementById('message-display');
 const video = document.getElementById('webcam');
 const canvas = document.getElementById('outputCanvas');
-
+// Canvasのコンテキスト
 const ctx = canvas.getContext('2d');
 
 // 検出器の初期化
@@ -71,6 +71,7 @@ async function setupCamera() {
  */
 async function setupModel() {
     const model = poseDetection.SupportedModels.MoveNet;
+    // 検出器を作成
     detector = await poseDetection.createDetector(model, {
         modelType: poseDetection.movenet.modelType.SINGLEPOSE_THUNDER,
     });
@@ -201,11 +202,11 @@ function isHeadDroping(keypoints) {
     const rightEar = keypoints[4];
 
     // TODO: 目と耳の位置(Y)を比較して、うつむきかどうかを判定
-    const leftDrop = false;
-    const rightDrop = false;
+    const leftDrop = leftEar.y > leftEye.y; // 左耳が左目より下にあるか
+    const rightDrop = rightEar.y > rightEye.y; // 右耳が右目より下にあるか
 
     // TODO: 目の方が下ならうつむきと判定
-    return false;
+    return leftDrop || rightDrop;
 }
 
 /**
