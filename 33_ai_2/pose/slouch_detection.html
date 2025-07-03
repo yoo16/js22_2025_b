@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow.js - MoveNet</title>
+
+    <!-- CDN TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CDN TensorFlow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+
+    <!-- CDN Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <main class="container mx-auto p-4">
+        <!-- メッセージ -->
+        <div class="flex justify-center items-center">
+            <div id="message-display" class="text-center w-full my-2 p-3 bg-green-300 text-green-800 rounded">
+                モデル読み込み中...
+            </div>
+        </div>
+
+        <!-- 音声ON/OFFボタン -->
+        <div class="flex justify-center items-center my-4">
+            <button id="toggle-audio" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                🔊 音声ON
+            </button>
+        </div>
+        <!-- 映像とキャンバス -->
+        <div class="relative w-full max-w-3xl aspect-video mx-auto">
+            <video id="webcam" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted></video>
+            <canvas id="outputCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+        </div>
+
+    </main>
+
+    <script type="module" src="js/slouch_detection.js" defer></script>
+</body>
+
+</html>

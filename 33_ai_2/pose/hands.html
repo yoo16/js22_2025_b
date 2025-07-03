@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TensorFlow.js - Hands Detection</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- TensorFlow.js + MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <main class="flex flex-col items-center justify-center">
+        <!-- チェックボックス -->
+        <div class="my-4">
+            <label class="inline-flex items-center text-gray-800 text-sm">
+                <input type="checkbox" id="toggleSkeleton" class="form-checkbox mr-2" checked>
+                骨格表示
+            </label>
+        </div>
+
+        <div class="relative flex justify-center items-center">
+            <video id="webcam"
+                class="w-[800px] h-[500px] aspect-video object-cover rounded-lg shadow-lg pointer-events-none" autoplay
+                playsinline muted></video>
+            <canvas id="outputCanvas" class="absolute top-0 left-0 w-[800px] h-[500px] pointer-events-none"></canvas>
+        </div>
+    </main>
+
+
+    <!-- スクリプト -->
+    <script type="module" src="js/hands.js"></script>
+</body>
+
+</html>

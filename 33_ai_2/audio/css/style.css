@@ -1,0 +1,12 @@
+/* Chrome, Safari 向け */
+progress::-webkit-progress-bar {
+    background-color: #e0f2fe;
+    /* bg-sky-100 */
+    border-radius: 0.25rem;
+}
+
+progress::-webkit-progress-value {
+    background-color: #0ea5e9;
+    /* bg-sky-500 */
+    border-radius: 0.25rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MoveNet - Multi Pose Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- TensorFlow.js ライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+
+    <!-- 外部スクリプト -->
+    <script src="js/video.js" defer></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col">
+
+    <!-- ステータス表示 -->
+    <div id="status"
+        class="bg-white/90 text-gray-800 px-4 py-2 rounded shadow text-sm font-medium z-20">
+        モデル読み込み中...
+    </div>
+
+    <!-- ファイル入力 -->
+    <input id="fileInput" type="file" accept="video/*"
+        class="left-4 z-10 border border-gray-300 px-3 py-2 rounded shadow disabled:opacity-50"
+        disabled />
+
+    <!-- メイン表示エリア -->
+    <div class="relative">
+        <video id="video" width="640" height="480" class="" controls muted loop></video>
+        <canvas id="canvas" width="640" height="480"
+            class="absolute top-0 left-0 pointer-events-none"></canvas>
+    </div>
+
+</body>
+
+</html>
