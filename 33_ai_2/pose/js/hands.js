@@ -93,10 +93,10 @@ function countExtendedFingers(keypoints) {
     if (isThumbExtended(keypoints)) count++;
 
     // TODO: 他の指（tipが中間関節より上）
-    if (keypoints[0].y < keypoints[0].y) count++;   // 人差し指:8 < 6
-    if (keypoints[0].y < keypoints[0].y) count++; // 中指: 12 < 10
-    if (keypoints[0].y < keypoints[0].y) count++; // 薬指: 16 < 14
-    if (keypoints[0].y < keypoints[0].y) count++; // 小指: 20 < 18
+    if (keypoints[8].y < keypoints[6].y) count++;   // 人差し指:8 < 6
+    if (keypoints[12].y < keypoints[10].y) count++; // 中指: 12 < 10
+    if (keypoints[16].y < keypoints[14].y) count++; // 薬指: 16 < 14
+    if (keypoints[20].y < keypoints[8].y) count++; // 小指: 20 < 18
 
     return count;
 }
