@@ -33,7 +33,7 @@ function renderTotal(labels, groups) {
     const totalList = getTotalData(labels, groups);
 
     // TODO: 得票数で降順にソート
-    // totalList.sort((a, b) => b.total - a.total);
+    totalList.sort((a, b) => b.total - a.total);
 
     // カードHTML生成（No付き）
     const cards = totalList.map((item, index) => `
