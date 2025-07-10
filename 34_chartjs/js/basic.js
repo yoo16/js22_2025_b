@@ -34,7 +34,7 @@ function renderChart() {
                 // TODO: データセットのラベル: labels を設定
                 label: '',
                 // TODO: Y軸のデータ: values を設定
-                data: [],
+                data: values,
                 // TODO: 塗りつぶしの色: backgroundColors を設定
                 backgroundColor: [],
                 // TODO: 枠線の色: borderColors を設定
