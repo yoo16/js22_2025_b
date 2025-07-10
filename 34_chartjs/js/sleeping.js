@@ -22,6 +22,7 @@ async function createLineChart() {
             labels: labels,
             // TODO: データセット（y軸の値）
             datasets: [{
+                label: '1週間のデータ',
                 data: data,
             }]
         },
