@@ -25,11 +25,11 @@ function renderChart() {
     const ctx = document.getElementById('barChart').getContext('2d');
     // Chart.jsのインスタンスを作成
     chart = new Chart(ctx, {
-        // TODO: グラフの種類を指定
-        type: '',
+        // TODO: グラフの種類を指定: 棒グラフ = bar
+        type: 'bar',
         data: {
             // TODO: X軸のデータ: labels
-            labels: [],
+            labels: labels,
             datasets: [{
                 // TODO: データセットのラベル: labels を設定
                 label: '',
