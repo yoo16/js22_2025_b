@@ -32,11 +32,11 @@ async function createLineChart() {
                 tooltip: {
                     // TODO: コールバックでツールチップの表示内容をカスタマイズ
                     callbacks: {
-                        // label: function (context) {
-                        //     const sleep = context.label;
-                        //     const productivity = context.raw;
-                        //     return `睡眠: ${sleep}時間 / 生産性: ${productivity}`;
-                        // }
+                        label: function (context) {
+                            const sleep = context.label;
+                            const productivity = context.raw;
+                            return `睡眠: ${sleep}時間 / 生産性: ${productivity}`;
+                        }
                     }
                 }
             },
