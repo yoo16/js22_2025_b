@@ -36,7 +36,7 @@ function renderChart() {
                 // TODO: Y軸のデータ: values を設定
                 data: values,
                 // TODO: 塗りつぶしの色: backgroundColors を設定
-                backgroundColor: [],
+                backgroundColor: backgroundColors,
                 // TODO: 枠線の色: borderColors を設定
                 borderColor: [],
                 // TODO: 枠線の太さ: 任意の数値を設定
