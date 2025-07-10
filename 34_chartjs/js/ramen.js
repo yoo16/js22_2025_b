@@ -59,8 +59,8 @@ function renderTotal(labels, groups) {
 function createBarChart(labels, groups, colors) {
     // TODO:データを整形
     const datasets = groups.map((group, index) => ({
-        // label: group.name,
-        // data: group.data,
+        label: group.name,
+        data: group.data,
     }));
 
     new Chart(barCtx, {
