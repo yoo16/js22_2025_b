@@ -15,11 +15,14 @@ const pointRadius = 6;
 
 async function createLineChart() {
     new Chart(ctx, {
+        // 折れ線グラフ
         type: 'line',
         data: {
             // TODO: ラベルを設定（x軸の値）
+            labels: labels,
             // TODO: データセット（y軸の値）
             datasets: [{
+                data: data,
             }]
         },
         // オプション
