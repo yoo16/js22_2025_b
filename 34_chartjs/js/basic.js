@@ -40,7 +40,7 @@ function renderChart() {
                 // TODO: 枠線の色: borderColors を設定
                 borderColor: borderColors,
                 // TODO: 枠線の太さ: 任意の数値を設定
-                borderWidth: 0
+                borderWidth: 2
             }]
         },
         options: {
