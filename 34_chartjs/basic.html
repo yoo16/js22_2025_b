@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Chart.js</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CDN: Chart.js の読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -12,9 +13,11 @@
 
     <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-xl">
         <h2 class="text-xl font-bold mb-4 text-center">投票結果</h2>
+        <!-- このCanvasにグラフが描画 -->
         <canvas id="barChart" class="w-full h-64"></canvas>
     </div>
 
+    <!-- グラフを実際に描画 -->
     <script src="js/basic.js"></script>
 </body>
 
