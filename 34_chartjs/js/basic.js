@@ -32,7 +32,7 @@ function renderChart() {
             labels: labels,
             datasets: [{
                 // TODO: データセットのラベル: labels を設定
-                label: '',
+                label: 'どんな色が好き？',
                 // TODO: Y軸のデータ: values を設定
                 data: values,
                 // TODO: 塗りつぶしの色: backgroundColors を設定
@@ -40,14 +40,14 @@ function renderChart() {
                 // TODO: 枠線の色: borderColors を設定
                 borderColor: borderColors,
                 // TODO: 枠線の太さ: 任意の数値を設定
-                borderWidth: 2
+                borderWidth: 0
             }]
         },
         options: {
             plugins: {
                 // 凡例の表示設定
                 legend: {
-                    display: true
+                    display: false
                 }
             },
         }
