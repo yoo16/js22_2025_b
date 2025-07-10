@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ラーメン人気ランキング</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center space-y-8 p-4">
+    <h1 class="text-2xl font-bold text-center">🍜 ラーメン人気ランキング</h1>
+
+    <div id="message"></div>
+
+    <!-- 横並びのグラフ -->
+    <div class="flex flex-wrap gap-4 justify-center w-full max-w-6xl">
+        <!-- 男女別 棒グラフ -->
+        <div class="bg-white p-3 rounded-lg shadow-lg w-full sm:w-[50%] lg:w-[50%]">
+            <div>
+                <h2 class="text-xl font-bold text-center my-4">男女別</h2>
+                <canvas id="barChart"></canvas>
+                <h2 class="text-xl font-bold text-center my-4">総合</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- 総合 円グラフ -->
+        <div class="bg-white p-3 rounded-lg shadow-lg w-full sm:w-[25%] lg:w-[25%]">
+            <h2 class="text-xl text-center font-bold my-2">総合ランキング</h2>
+            <div id="total-container" class="p-4 w-full max-w-4xl"></div>
+        </div>
+    </div>
+
+    <!-- 表 -->
+    <div id="gender-container" class="p-4 w-full max-w-4xl"></div>
+
+    <script src="js/ramen.js"></script>
+</body>
+
+</html>

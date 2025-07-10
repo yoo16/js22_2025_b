@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chart.js サンプル</title>
+    <!-- Chart.js を CDN から読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="container mx-auto">
+        <!-- メッセージ -->
+        <div id="message-container" class="alert alert-danger"></div>
+        <!-- グラフ切り替え -->
+        <div id="graphs" class="grid md:grid-cols-2 gap-4 p-4">
+            <!-- 売上グラフ描画用の canvas 要素 -->
+            <section class="my-5">
+                <h2 class="text-center text-2xl font-bold">売上</h2>
+                <canvas id="sales-chart" width="400"></canvas>
+                <div class="flex justify-center mt-4">
+                    <button id="graph-bar" onclick="barChart()"
+                        class="bg-blue-500 text-white font-bold py-2 px-4 rounded">棒グラフ</button>
+                    <button id="graph-line" onclick="lineGraph()"
+                        class="bg-blue-500 text-white font-bold py-2 px-4 rounded ml-2">折れ線グラフ</button>
+                </div>
+            </section>
+
+            <!-- ソフトウェアグラフ描画用の canvas 要素 -->
+            <section class="my-5">
+                <h2 class="text-center text-2xl font-bold">ソフトウェア</h2>
+                <canvas id="softwares-chart" class="my-5" width="400"></canvas>
+                <div class="flex justify-center mt-4">
+                    <button id="graph-bar" onclick="pieChart()"
+                        class="bg-blue-500 text-white font-bold py-2 px-4 rounded">円グラフ</button>
+                    <button id="graph-line" onclick="doughnutChart()"
+                        class="bg-blue-500 text-white font-bold py-2 px-4 rounded ml-2">ドーナツグラフ</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/sales.js"></script>
+</body>
+
+</html>

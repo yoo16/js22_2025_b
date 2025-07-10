@@ -1,0 +1,19 @@
+{
+    "type": "radar",
+    "name": "ノクターナ・エルヴァ",
+    "data": {
+        "labels": [ "攻撃力", "防御力", "魔力", "敏捷性", "知力", "精神力" ],
+        "datasets": [
+            {
+                "label": "ノクターナ・エルヴァ",
+                "data": [ 55, 70, 100, 80, 95, 70 ],
+                "backgroundColor": "rgba(80, 80, 80, 0.5)",
+                "borderColor": "rgba(80, 80, 80, 1)",
+                "borderWidth": 1
+            }
+        ]
+    },
+    "options": {
+        "responsive": true
+    }
+}

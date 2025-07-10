@@ -1,0 +1,19 @@
+{
+    "type": "radar",
+    "name": "アリエス・ローザ",
+    "data": {
+        "labels": [ "攻撃力", "防御力", "魔力", "敏捷性", "知力", "精神力" ],
+        "datasets": [
+            {
+                "label": "アリエス・ローザ",
+                "data": [ 80, 90, 75, 100, 70, 80 ],
+                "backgroundColor": "rgba(54, 162, 235, 0.5)",
+                "borderColor": "rgba(54, 162, 235, 1)",
+                "borderWidth": 1
+            }
+        ]
+    },
+    "options": {
+        "responsive": true
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>キャラクター紹介</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <!-- サムネイル画像を横一列に表示 -->
+        <div id="thumbnailContainer" class="my-5 justify-center flex gap-4 overflow-x-auto"></div>
+
+        <!-- タイトル（キャラクター名はJSで更新） -->
+        <h2 id="player-name" class="text-3xl font-bold mb-6 text-center"></h2>
+
+        <!-- キャラクター紹介セクション -->
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- キャラクター画像（大画像） -->
+            <div class="overflow-hidden">
+                <img id="playerImage" src="" alt="キャラクター画像" class="w-[80%] object-cover">
+            </div>
+
+            <!-- キャラクター詳細＆グラフ -->
+            <div class="bg-white p-5">
+                <canvas id="playerChart" class="mx-auto w-full max-w-xl"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript 読み込み -->
+    <script src="js/player.js"></script>
+</body>
+
+</html>
