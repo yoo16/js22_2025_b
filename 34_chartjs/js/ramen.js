@@ -101,20 +101,20 @@ function createPieChart(labels, groups) {
             id: 'pieLabelInside',
             // TODO: 円グラフの中心にラベルを表示
             afterDraw(chart) {
-                // const { ctx } = chart;
-                // const meta = chart.getDatasetMeta(0);
-                // ctx.font = 'bold 18px sans-serif';
-                // ctx.fillStyle = 'white';
+                const { ctx } = chart;
+                const meta = chart.getDatasetMeta(0);
+                ctx.font = 'bold 18px sans-serif';
+                ctx.fillStyle = 'white';
 
-                // // 円グラフの中心に合計値を表示
-                // meta.data.forEach((arc, i) => {
-                //     const angle = (arc.startAngle + arc.endAngle) / 2;
-                //     const radius = (arc.innerRadius + arc.outerRadius) / 2;
-                //     const x = arc.x + Math.cos(angle) * radius;
-                //     const y = arc.y + Math.sin(angle) * radius;
-                //     ctx.fillText(labels[i], x, y);
-                // });
-                // ctx.restore();
+                // 円グラフの中心に合計値を表示
+                meta.data.forEach((arc, i) => {
+                    const angle = (arc.startAngle + arc.endAngle) / 2;
+                    const radius = (arc.innerRadius + arc.outerRadius) / 2;
+                    const x = arc.x + Math.cos(angle) * radius;
+                    const y = arc.y + Math.sin(angle) * radius;
+                    ctx.fillText(labels[i], x, y);
+                });
+                ctx.restore();
             }
         }]
     });
