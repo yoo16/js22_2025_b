@@ -164,8 +164,8 @@ function save() {
 function filtered() {
     // TODO: active, done フィルタリング
     // todos.filter(...)
-    if (filter === "active") todos = todos.filter(todo => !todo.done);
-    if (filter === "done") todos = todos.filter(todo => todo.done);
+    if (filter === "active") return todos.filter(todo => !todo.done);
+    if (filter === "done") return todos.filter(todo => todo.done);
     return todos;
 }
 
