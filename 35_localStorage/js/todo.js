@@ -54,19 +54,23 @@ const store = {
  * @param {*} e 
  */
 const add = (e) => {
+    // デフォルトのフォーム送信をキャンセル
     e.preventDefault();
+    // テキスト入力の値を取得
     let text = $new.value;
     text = (text || "").trim();
     if (!text) return;
 
     // 新しいタスクを追加
     // TODO: UUID生成
-    const id = "";
+    const id = crypto.randomUUID();
     // TODO: 作成日時
-    const createdAt = "";
+    const createdAt = Date.now();
     // 完了状態(初期値は false)
     const done = false;
     // TODO: タスクに追加 { id, text, done, createdAt }
+    todos.push({ id, text, done, createdAt });
+    // todos.push({ id: id, text: text, done: done, createdAt: createdAt });
 
     // 入力フィールドをクリア
     $new.value = "";
