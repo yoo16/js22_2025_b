@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LocalStorage デモ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+    <main class="max-w-xl mx-auto p-6">
+        <header class="mb-6">
+            <h1 class="text-2xl font-semibold">LocalStorage</h1>
+        </header>
+
+        <section class="mb-4">
+            <h2 class="text-xl py-2 font-semibold">テキスト</h2>
+            <div class="flex flex-wrap gap-3">
+                <button id="save" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    保存
+                </button>
+                <button id="load" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    読込
+                </button>
+                <button id="remove" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    削除
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="text-xl py-2 font-semibold">オブジェクト</h2>
+            <div class="flex flex-wrap gap-3">
+                <button id="saveList" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    保存
+                </button>
+                <button id="loadList" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    読込
+                </button>
+                <button id="removeList" class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm">
+                    削除
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-sm font-medium text-gray-600 mb-2">結果</h2>
+            <div id="output" class="p-4 bg-white border border-gray-200 rounded-xl min-h-[96px] whitespace-pre-wrap
+                text-sm leading-relaxed" role="status" aria-live="polite">(ここに結果が表示されます)</div>
+        </section>
+    </main>
+
+    <script src="js/basic.js"></script>
+</body>
+
+</html>

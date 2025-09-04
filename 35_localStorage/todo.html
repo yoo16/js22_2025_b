@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ToDo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+    <main class="max-w-2xl mx-auto p-6">
+        <header class="mb-6">
+            <h1 class="text-3xl font-semibold tracking-tight">ToDo リスト</h1>
+        </header>
+
+        <!-- 入力行 -->
+        <section class="mb-4">
+            <div class="flex gap-2">
+                <input id="newTodo" type="text" placeholder="タスクを入力"
+                    class="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3" autocomplete="off" />
+                <button id="addBtn" class="px-4 py-3 rounded-xl bg-sky-600 text-white font-medium">
+                    ＋
+                </button>
+            </div>
+        </section>
+
+        <!-- フィルタ -->
+        <section class="mb-3">
+            <div id="filterButtons" class="inline-flex rounded-lg border border-gray-200 bg-white p-1">
+                <button data-filter="all"
+                    class="filter-btn rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    すべて
+                </button>
+                <button data-filter="active"
+                    class="filter-btn rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    未完了
+                </button>
+                <button data-filter="done"
+                    class="filter-btn rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    完了
+                </button>
+            </div>
+        </section>
+
+        <!-- リスト -->
+        <section class="mb-4">
+            <p class="text-xs text-gray-500 my-2">タスクをダブルクリックで編集できます。</p>
+            <ul id="list" class="divide-y divide-gray-200 bg-white border border-gray-200 rounded-xl overflow-hidden">
+            </ul>
+        </section>
+
+        <!-- フッター -->
+        <footer class="flex flex-wrap items-center justify-between gap-3">
+            <div class="text-sm text-gray-600">
+                表示
+                <span id="count">0</span>
+            </div>
+            <div class="flex gap-2">
+                <button id="clearDone"
+                    class="px-3 py-2 text-sm rounded-lg border border-gray-300 bg-white hover:bg-gray-50">
+                    完了を一括削除
+                </button>
+                <button id="clearAll"
+                    class="px-3 py-2 text-sm rounded-lg border border-gray-300 bg-white hover:bg-gray-50">
+                    すべて削除
+                </button>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/todo.js" defer></script>
+</body>
+
+</html>
