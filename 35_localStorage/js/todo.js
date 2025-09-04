@@ -95,6 +95,7 @@ const add = (e) => {
  */
 function remove(id) {
     console.log("remove:", id);
+    // id が一致しなかったデータをフィルタリングする
     todos = todos.filter(todo => todo.id !== id);
 
     // LocalStorageに保存
@@ -223,6 +224,9 @@ function renderItem(todo) {
     deleteButton.className = "ml-2 px-2 py-1 text-sm rounded-md text-white bg-red-600";
     deleteButton.textContent = "削除";
     // TODO: クリックで remove を呼び出し
+    deleteButton.addEventListener("click", () => {
+        remove(todo.id);
+    });
 
     // アイテムに要素を追加
     li.append(checkBox, span, deleteButton);
