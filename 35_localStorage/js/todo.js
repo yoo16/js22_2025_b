@@ -127,6 +127,7 @@ function toggleDone(id, done) {
  */
 function clearDone() {
     // TODO: 完了済みタスクを削除
+    todos = todos.filter(todo => !todo.done);
 
     // LocalStorageに保存
     save();
@@ -141,6 +142,7 @@ function clearDone() {
 function clearAll() {
     if (!confirm("すべてのタスクを削除します。よろしいですか？")) return;
     // TODO: すべてのタスクを削除
+    todos = [];
 
     // LocalStorageに保存
     save();
