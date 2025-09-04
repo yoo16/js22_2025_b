@@ -225,6 +225,9 @@ function renderItem(todo) {
     // TODO: タスクの内容を設定
     span.textContent = todo.text;
     // TODO: ダブルクリックで edit を呼び出し
+    sapnn.addEventListener("dblclick", () => {
+        edit(todo, span);
+    });
 
     // 個別削除
     const deleteButton = document.createElement("button");
