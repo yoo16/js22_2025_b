@@ -7,6 +7,7 @@ const todos = [
 
 document.getElementById('save').addEventListener('click', () => {
     // TODO: Local Storage にキーを指定して保存
+    localStorage.setItem('message', text);
     output.textContent = `保存:\n ${text}`;
 });
 
