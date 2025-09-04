@@ -41,6 +41,8 @@ document.getElementById('loadList').addEventListener('click', () => {
 
     // JSONをオブジェクトに変換
     const data = json ? JSON.parse(json) : [];
+    // let data = [];
+    // if (json) data = JSON.parse(json);
 
     // オブジェクトをテキストに変換
     const text = data.map(value => `${value.id}: ${value.text} (${value.done})`).join('\n');
