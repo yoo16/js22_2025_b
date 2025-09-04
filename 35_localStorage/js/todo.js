@@ -27,6 +27,8 @@ const store = {
      */
     set(key, value) {
         // TODO: JSONに変換して保存
+        const json = JSON.stringify(value);
+        localStorage.setItem(key, json);
     },
     /**
      * 取得
