@@ -1,6 +1,5 @@
 const KEY = "todos";
 let filter = "all";
-let filterStyles = ['bg-sky-600', 'text-white', 'hover:bg-gray-50'];
 
 // TODO: 初期データ
 // let todos = [];
@@ -207,7 +206,7 @@ function renderItem(todo) {
     span.className = "flex-1 text-[15px] " + (todo.done ? "line-through text-gray-400" : "");
     span.title = "ダブルクリックで編集";
     // TODO: タスクの内容を設定
-    span.textContent = "";
+    span.textContent = todo.text;
     // TODO: ダブルクリックで edit を呼び出し
 
     // 個別削除
