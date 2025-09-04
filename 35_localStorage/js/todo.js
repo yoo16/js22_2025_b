@@ -209,7 +209,11 @@ function renderItem(todo) {
     checkBox.type = "checkbox";
     checkBox.className = "h-5 w-5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500";
     // TODO: チェック状態を設定
+    checkBox.checked = todo.done;
     // TODO: チェックボックスの change イベントで toggleDone を呼び出し
+    checkBox.addEventListener("change", (e) => {
+        toggleDone(todo.id, e.target.checked);
+    });
 
     // タスクテキスト
     const span = document.createElement("span");
