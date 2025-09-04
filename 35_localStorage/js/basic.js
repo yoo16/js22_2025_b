@@ -19,7 +19,7 @@ document.getElementById('load').addEventListener('click', () => {
 
 document.getElementById('remove').addEventListener('click', () => {
     // TODO: Local Storage からキーを指定して削除
-
+    localStorage.removeItem('message');
     output.textContent = '削除しました。';
 });
 
