@@ -28,6 +28,7 @@ document.getElementById('saveList').addEventListener('click', () => {
     const json = JSON.stringify(todos);
 
     // TODO: Local Storage にキーを指定して保存
+    localStorage.setItem('items', json);
 
     // オブジェクトをテキストに変換
     const text = todos.map(todo => `${todo.id}: ${todo.text} (${todo.done})`).join('\n');
@@ -36,6 +37,7 @@ document.getElementById('saveList').addEventListener('click', () => {
 
 document.getElementById('loadList').addEventListener('click', () => {
     // TODO: Local Storage からーを指定して取得
+    const json = localStorage.getItem('items');
 
     // JSONをオブジェクトに変換
     const data = json ? JSON.parse(json) : [];
@@ -47,6 +49,6 @@ document.getElementById('loadList').addEventListener('click', () => {
 
 document.getElementById('removeList').addEventListener('click', () => {
     // TODO: Local Storage からキーを指定して削除
-
+    localStorage.removeItem('items');
     output.textContent = '削除しました。';
 });
