@@ -34,7 +34,10 @@ const store = {
      * 取得
      */
     get(key) {
-        // TODO: 取得してJSONをオブジェクトに変換
+        // TODO: LocalStorageからJSONを取得
+        const json = localStorage.getItem(key);
+        // オブジェクトに変換
+        const todos = json ? JSON.parse(json) : [];
         return todos;
     },
     /**
