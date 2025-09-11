@@ -45,7 +45,7 @@ function getCookie(key) {
 // Cookieを削除
 function deleteCookie(key) {
     // TODO: 有効期限を過去に設定して削除（path=/ を必ず指定）
-    // document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
 }
 
 // Cookieを削除
