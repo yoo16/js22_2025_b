@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cookie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 外部テーマCSS -->
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+    <main class="mx-auto max-w-md p-6">
+        <header class="mb-6 flex items-center justify-between">
+            <h1 class="text-2xl font-semibold">Cookie</h1>
+
+            <!-- テーマ切り替えボタン -->
+            <button id="themeBtn" type="button" aria-pressed="false"
+                class="flex items-center gap-2 rounded-xl border px-3 py-1.5 text-sm shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span id="themeIcon">🌞</span>
+                <span id="themeLabel">ライト</span>
+            </button>
+        </header>
+
+        <!-- 入力カード -->
+        <section class="mb-6">
+            <div class="card rounded-2xl border p-4 shadow-sm space-y-3">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"></label>
+                    <button id="testBtn"
+                        class="rounded-xl bg-green-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-green-700">
+                        とりあえず保存！
+                    </button>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">アカウント名</label>
+                    <input id="account_name" type="text"
+                        class="w-full rounded-xl border border-gray-300 px-4 py-2 text-sm" />
+                </div>
+
+                <!-- モード選択 -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">有効期限の指定方法</label>
+                    <select id="mode" class="w-full rounded-xl border border-gray-300 px-4 py-2 text-sm">
+                        <option value="expires">expires（日付指定）</option>
+                        <option value="max-age">max-age（秒指定）</option>
+                    </select>
+                </div>
+
+                <!-- expires 入力 -->
+                <div id="expiresField">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">expires (日付時刻)</label>
+                    <input id="expires" type="datetime-local"
+                        class="w-full rounded-xl border border-gray-300 px-4 py-2 text-sm" />
+                </div>
+
+                <!-- max-age 入力 -->
+                <div id="maxAgeField" class="hidden">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">max-age (秒)</label>
+                    <input id="maxAge" type="number" placeholder="30"
+                        class="w-full rounded-xl border border-gray-300 px-4 py-2 text-sm" />
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="saveBtn" type="button"
+                        class="flex-1 rounded-xl bg-sky-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-sky-700">
+                        保存
+                    </button>
+                    <button id="deleteBtn" type="button"
+                        class="flex-1 rounded-xl bg-red-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-red-700">
+                        削除
+                    </button>
+                    <button id="deleteAllBtn" type="button"
+                        class="flex-1 rounded-xl bg-red-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-red-700">
+                        すべて削除
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 表示カード -->
+        <section>
+            <div class="card rounded-2xl border p-4 shadow-sm">
+                <h2 class="text-sm font-medium text-gray-700 mb-2">現在の Cookie</h2>
+                <pre id="cookies"
+                    class="min-h-[96px] whitespace-pre-wrap rounded-xl border bg-gray-50 p-3 text-sm text-gray-800">(まだありません)</pre>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cookie.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

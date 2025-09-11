@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>XSS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 text-slate-800 antialiased">
+    <main id="main" class="flex items-center justify-center min-h-screen p-4">
+        <div class="w-full max-w-md">
+            <!-- Card -->
+            <div class="bg-white/90 backdrop-blur shadow-xl rounded-2xl border border-slate-200">
+                <!-- Header -->
+                <div class="p-6 border-b border-slate-100">
+                    <h1 class="text-xl font-semibold tracking-tight text-slate-900">XSS</h1>
+                </div>
+
+                <div class="p-6 space-y-6">
+                    <div class="grid grid-cols-1 gap-3">
+                        <textarea name="content" id="content"></textarea>
+                        <div>
+                            &lt;img src="x" onerror="alert(document.cookie)"&gt;
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3">
+                        <button id="draftBtn" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">下書き</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button id="rewrite" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">JSでCookieを書き換え</button>
+                    </div>
+
+                    <!-- Output -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-slate-700">レスポンス</label>
+                        <div id="out"
+                            class="h-48 overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs leading-relaxed text-slate-800"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 分離したJS（そのまま） -->
+    <script src="./js/steal.js" defer></script>
+</body>
+
+</html>

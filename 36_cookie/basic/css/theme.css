@@ -1,0 +1,51 @@
+/* Light Theme */
+body {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.card {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+}
+
+/* label・見出しなど（ライト用） */
+label,
+h1,
+h2,
+h3,
+.text-dark {
+    color: #111827;
+}
+
+/* Dark Theme */
+html.dark body {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+html.dark .card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+/* label・見出しなど（ダーク用） */
+html.dark label,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark .text-dark {
+    color: #f9fafb;
+}
+
+/* input の文字色・背景も調整 */
+html.dark input,
+html.dark select,
+html.dark textarea {
+    background-color: #374151;
+    /* 濃いグレー背景 */
+    color: #f9fafb;
+    /* 白文字 */
+    border-color: #4b5563;
+    /* グレー枠 */
+}

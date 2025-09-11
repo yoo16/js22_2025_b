@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mini Cookie Auth</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 text-slate-800 antialiased">
+    <main id="main" class="flex items-center justify-center min-h-screen p-4">
+        <div class="w-full max-w-md">
+            <!-- Card -->
+            <div class="bg-white/90 backdrop-blur shadow-xl rounded-2xl border border-slate-200">
+                <!-- Header -->
+                <div class="p-6 border-b border-slate-100">
+                    <h1 class="text-xl font-semibold tracking-tight text-slate-900">Cookie + HttpOnly 認証</h1>
+                </div>
+                <div class="px-6 py-4 border-t border-slate-100">
+                    <ul class="mt-1 text-sm text-slate-500">
+                        <li>Cookie: HttpOnly : true, false</li>
+                        <li>PHPセッション: sid</li>
+                        <li>credentials: "include", "same-origin": クロスサイト通信に Cookie や認証情報を含めるかどうか</li>
+                    </ul>
+                </div>
+
+                <!-- Body -->
+                <div class="p-6 space-y-6">
+                    <!-- Login form -->
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <label for="email" class="block text-sm font-medium text-slate-700">メールアドレス</label>
+                            <input id="email" type="email" placeholder="email" value="test@test.com"
+                                class="w-full rounded-xl border-slate-300 bg-white px-3 py-2 text-slate-900 shadow-sm"
+                                autocomplete="username" />
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="password" class="block text-sm font-medium text-slate-700">パスワード</label>
+                            <input id="password" type="password" placeholder="password" value="secret123"
+                                class="w-full rounded-xl border-slate-300 bg-white px-3 py-2 text-slate-900 shadow-sm"
+                                autocomplete="current-password" />
+                        </div>
+
+                        <button id="login"
+                            class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-600/20 hover:bg-sky-700">
+                            Login
+                        </button>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <button id="me"
+                            class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                            /me（認証確認）
+                        </button>
+                        <button id="logout"
+                            class="inline-flex items-center justify-center rounded-xl border border-rose-300 bg-rose-50 px-4 py-2 text-sm font-medium text-rose-700 hover:bg-rose-100">
+                            Logout
+                        </button>
+                    </div>
+
+                    <!-- Output -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-slate-700">レスポンス</label>
+                        <div id="out"
+                            class="h-48 overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs leading-relaxed text-slate-800">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 分離したJS（そのまま） -->
+    <script src="./js/auth.js" defer></script>
+</body>
+
+</html>
