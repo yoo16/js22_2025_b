@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log("OSのテーマ変更:", e.matches);
             if (!getCookie(THEME_KEY)) {
                 // TODO: e.matches の値に応じて applyTheme を呼び出し
-                
+                applyTheme(e.matches ? "dark" : "light");
             }
         });
     }
