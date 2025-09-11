@@ -25,6 +25,7 @@ function setCookie(key, value, mode, expires, maxAge) {
     document.cookie = cookieStr;
     // コンソールに表示
     console.log(document.cookie);
+    console.log(cookieStr);
 }
 
 // Cookieを取得
