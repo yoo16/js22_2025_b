@@ -6,6 +6,7 @@ showCookies();
 
 document.getElementById("testBtn").addEventListener("click", () => {
     // TODO: cookie 保存: document.cookie = "キー=値"
+    document.cookie = "message=Hello World";
 });
 
 // Cookie一覧表示
