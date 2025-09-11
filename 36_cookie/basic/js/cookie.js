@@ -13,12 +13,12 @@ function setCookie(key, value, mode, expires, maxAge) {
         const date = new Date(expires);
         const dateString = date.toUTCString();
         // TODO: expires を cookieStr に連結 ※「;」で区切る
-        datateString += `; expires=${dateString}`;
+        cookieStr += `; expires=${dateString}`;
     }
     // max-ageの設定
     if (mode === "max-age" && maxAge) {
         // TODO: max-age  を cookieStr に連結 ※「;」で区切る
-        dateString += `; max-age=${maxAge}`;
+        cookieStr += `; max-age=${maxAge}`;
     }
 
     // TODO: Cookieの設定: document.cookie 
