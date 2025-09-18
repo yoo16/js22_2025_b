@@ -429,7 +429,7 @@ function renderNextActors() {
 }
 
 /**
- * 無限スクロールをセットアップ
+ * 無限スクロールをセットアップ( Infinity Scroll )
  * @param {Function} callback - 監視対象が画面に入ったときに呼ぶ処理
  * @param {Object} options - IntersectionObserver のオプション
  * @returns {IntersectionObserver} - observer インスタンス
@@ -441,14 +441,14 @@ function setupInfiniteScroll(callback, options = { rootMargin: "200px" }) {
     document.body.appendChild(sentinel);
 
     // TODO: 無限スクロール用のオブザーバーを作成
-    // const observer = new IntersectionObserver((entries) => {
-    //     if (entries[0].isIntersecting) {
-    //         callback();
-    //     }
-    // }, options);
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            callback();
+        }
+    }, options);
 
-    // observer.observe(sentinel);
-    // return observer;
+    observer.observe(sentinel);
+    return observer;
 }
 
 // 初期ロード
@@ -467,11 +467,13 @@ function setupInfiniteScroll(callback, options = { rootMargin: "200px" }) {
 
 // イベント
 speedSlider.addEventListener('input', () => {
-    // TODO: ラベルをリアルタイム更新
+    // TODO: speed ラベルをリアルタイム更新
+    speedValue.textContent = speedSlider.value;
 });
 
 emotionSlider.addEventListener('input', () => {
-    // TODO: ラベルをリアルタイム更新
+    // TODO: emtion ラベルをリアルタイム更新
+    emotionValue.textContent = emotionSlider.value;
 });
 
 // 画面リサイズ時に BATCH_SIZE を更新
