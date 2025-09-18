@@ -164,6 +164,11 @@ async function getVoice(id, message) {
         // soundDuration: 0.1 固定（string）
         // script: 引数の message
         const params = {
+            format: format,
+            speed: speed,
+            emotionalLevel: emotion,
+            soundDuration: "0.1",
+            script: message
         };
 
         // TODO: オプション設定
@@ -173,10 +178,17 @@ async function getVoice(id, message) {
         // x-api-key: API_KEY 
         // body: JSON.stringify(データ)
         const options = {
+            method: 'POST',
+            headers: {
+                accept: 'application/json',
+                'content-type': 'application/json',
+                'x-api-key': API_KEY
+            },
+            body: JSON.stringify(params)
         };
 
         // TODO: 音声生成APIのURL: {id} は引数の id に置換
-        const uri = ``;
+        const uri = `https://api.nijivoice.com/api/platform/v1/voice-actors/${id}/generate-voice`;
         // Fetch API で取得
         const response = await fetch(uri, options);
         // オブジェクトに変換
