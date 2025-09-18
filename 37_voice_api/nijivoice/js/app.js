@@ -356,9 +356,9 @@ async function createVoice(id, text) {
     const { generatedVoice } = data;
     if (generatedVoice && generatedVoice.audioFileUrl && generatedVoice.audioFileDownloadUrl) {
         // TODO: audio タグに src をセット: generatedVoice.audioFileUrl
-        actorAudio.src = "";
+        actorAudio.src = generatedVoice.audioFileUrl;
         // TODO: ダウンロードリンクに href をセット: generatedVoice.audioFileDownloadUrl
-        downloadBtn.href = "";
+        downloadBtn.href = generatedVoice.audioFileDownloadUrl;
 
         // 生成後の残クレジット数で残高表示を更新（もし取得できれば）
         if (typeof generatedVoice.remainingCredits === 'number') {
