@@ -87,35 +87,35 @@ function toggleVoiceLoading(isLoading) {
  * 声優一覧APIをGET取得
  * URI: https://api.nijivoice.com/api/platform/v1/voice-actors
  */
-async function getActors() {
-    try {
-        // TODO: オプション設定
-        // メソッド: GET
-        // ヘッダー: accept: application/json
-        // x-api-key: API_KEY 
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                'x-api-key': API_KEY
-            }
-        };
+// async function getActors() {
+//     try {
+//         // TODO: オプション設定
+//         // メソッド: GET
+//         // ヘッダー: accept: application/json
+//         // x-api-key: API_KEY 
+//         const options = {
+//             method: 'GET',
+//             headers: {
+//                 accept: 'application/json',
+//                 'x-api-key': API_KEY
+//             }
+//         };
 
-        // TODO: 声優一覧APIのURL
-        const uri = 'https://api.nijivoice.com/api/platform/v1/voice-actors';
-        // Fetch API で取得
-        const response = await fetch(uri, options);
-        // オブジェクトに変換
-        const data = await response.json();
-        console.log("取得:", data);
-        // 声優一覧をグローバル変数にセット
-        actorsData = data.voiceActors || [];
-        return actorsData;
-    } catch (err) {
-        console.error(err);
-        messageContainer.textContent = '声優一覧の取得に失敗しました。';
-    }
-}
+//         // TODO: 声優一覧APIのURL
+//         const uri = 'https://api.nijivoice.com/api/platform/v1/voice-actors';
+//         // Fetch API で取得
+//         const response = await fetch(uri, options);
+//         // オブジェクトに変換
+//         const data = await response.json();
+//         console.log("取得:", data);
+//         // 声優一覧をグローバル変数にセット
+//         actorsData = data.voiceActors || [];
+//         return actorsData;
+//     } catch (err) {
+//         console.error(err);
+//         messageContainer.textContent = '声優一覧の取得に失敗しました。';
+//     }
+// }
 
 // サーバ証明書で動かない人！
 // Apache + PHP でプロキシ経由で取得
@@ -125,17 +125,17 @@ async function getActors() {
  * Apache + PHP でプロキシ経由で取得
  * URI: ./api/getActors.php
  */
-// async function getActors() {
-//     try {
-//         const response = await fetch('./api/getActors.php');
-//         const data = await response.json();
-//         actorsData = data.voiceActors || [];
-//         return actorsData;
-//     } catch (err) {
-//         console.error(err);
-//         messageContainer.textContent = '声優一覧の取得に失敗しました。';
-//     }
-// }
+async function getActors() {
+    try {
+        const response = await fetch('./api/getActors.php');
+        const data = await response.json();
+        actorsData = data.voiceActors || [];
+        return actorsData;
+    } catch (err) {
+        console.error(err);
+        messageContainer.textContent = '声優一覧の取得に失敗しました。';
+    }
+}
 
 
 // JS から にじボイスAPI のアクセスが正常の動く人用
@@ -149,63 +149,6 @@ async function getActors() {
  * @param {*} message 
  * @returns 
  */
-async function getVoice(id, message) {
-    if (!message.trim()) return;
-
-    try {
-        // speed, emotion の値を取得
-        speed = document.getElementById('voice-speed')?.value || '1.0';
-        emotion = document.getElementById('voice-emotion')?.value || '0.1';
-
-        // TODO: POST送信パラメータ
-        // format: mp3
-        // speed: スライダーの値
-        // emotionalLevel: スライダーの値
-        // soundDuration: 0.1 固定（string）
-        // script: 引数の message
-        const params = {
-            format: format,
-            speed: speed,
-            emotionalLevel: emotion,
-            soundDuration: "0.1",
-            script: message
-        };
-
-        // TODO: オプション設定
-        // メソッド: POST
-        // ヘッダー: accept: application/json
-        //          content-type: application/json
-        // x-api-key: API_KEY 
-        // body: JSON.stringify(データ)
-        const options = {
-            method: 'POST',
-            headers: {
-                accept: 'application/json',
-                'content-type': 'application/json',
-                'x-api-key': API_KEY
-            },
-            body: JSON.stringify(params)
-        };
-
-        // TODO: 音声生成APIのURL: {id} は引数の id に置換
-        const uri = `https://api.nijivoice.com/api/platform/v1/voice-actors/${id}/generate-voice`;
-        // Fetch API で取得
-        const response = await fetch(uri, options);
-        // オブジェクトに変換
-        const data = await response.json();
-        console.log("音声生成結果:", data);
-        return data;
-    } catch (err) {
-        console.error("音声生成エラー: ", err);
-    }
-}
-
-// サーバ証明書で動かない人！
-/**
- * getVoice()
- * 
- * Apache + PHP でプロキシ経由で取得
- */
 // async function getVoice(id, message) {
 //     if (!message.trim()) return;
 
@@ -214,27 +157,84 @@ async function getVoice(id, message) {
 //         speed = document.getElementById('voice-speed')?.value || '1.0';
 //         emotion = document.getElementById('voice-emotion')?.value || '0.1';
 
-//         // フォームデータを作成
-//         const formData = new FormData();
-//         formData.append("id", id);
-//         formData.append("message", message);
-//         formData.append("speed", speed);
-//         formData.append("emotion", emotion);
+//         // TODO: POST送信パラメータ
+//         // format: mp3
+//         // speed: スライダーの値
+//         // emotionalLevel: スライダーの値
+//         // soundDuration: 0.1 固定（string）
+//         // script: 引数の message
+//         const params = {
+//             format: format,
+//             speed: speed,
+//             emotionalLevel: emotion,
+//             soundDuration: "0.1",
+//             script: message
+//         };
 
-//         // PHP (generateVoice.php) にPOST
-//         const response = await fetch("./api/generateVoice.php", {
-//             method: "POST",
-//             body: formData
-//         });
+//         // TODO: オプション設定
+//         // メソッド: POST
+//         // ヘッダー: accept: application/json
+//         //          content-type: application/json
+//         // x-api-key: API_KEY 
+//         // body: JSON.stringify(データ)
+//         const options = {
+//             method: 'POST',
+//             headers: {
+//                 accept: 'application/json',
+//                 'content-type': 'application/json',
+//                 'x-api-key': API_KEY
+//             },
+//             body: JSON.stringify(params)
+//         };
 
+//         // TODO: 音声生成APIのURL: {id} は引数の id に置換
+//         const uri = `https://api.nijivoice.com/api/platform/v1/voice-actors/${id}/generate-voice`;
+//         // Fetch API で取得
+//         const response = await fetch(uri, options);
+//         // オブジェクトに変換
 //         const data = await response.json();
 //         console.log("音声生成結果:", data);
 //         return data;
 //     } catch (err) {
 //         console.error("音声生成エラー: ", err);
-//         messageContainer.textContent = "音声生成に失敗しました。";
 //     }
 // }
+
+// サーバ証明書で動かない人！
+/**
+ * getVoice()
+ * 
+ * Apache + PHP でプロキシ経由で取得
+ */
+async function getVoice(id, message) {
+    if (!message.trim()) return;
+
+    try {
+        // speed, emotion の値を取得
+        speed = document.getElementById('voice-speed')?.value || '1.0';
+        emotion = document.getElementById('voice-emotion')?.value || '0.1';
+
+        // フォームデータを作成
+        const formData = new FormData();
+        formData.append("id", id);
+        formData.append("message", message);
+        formData.append("speed", speed);
+        formData.append("emotion", emotion);
+
+        // PHP (generateVoice.php) にPOST
+        const response = await fetch("./api/generateVoice.php", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        console.log("音声生成結果:", data);
+        return data;
+    } catch (err) {
+        console.error("音声生成エラー: ", err);
+        messageContainer.textContent = "音声生成に失敗しました。";
+    }
+}
 
 /**
  * getBalance()
@@ -242,28 +242,28 @@ async function getVoice(id, message) {
  * 残高情報APIを取得
  * URI: https://api.nijivoice.com/api/platform/v1/balances
  */
-async function getBalance() {
-    try {
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                'x-api-key': API_KEY
-            }
-        };
+// async function getBalance() {
+//     try {
+//         const options = {
+//             method: 'GET',
+//             headers: {
+//                 accept: 'application/json',
+//                 'x-api-key': API_KEY
+//             }
+//         };
 
-        // TODO: 残高情報APIのリクエスト
-        // const uri = 'https://api.nijivoice.com/api/platform/v1/balances';
-        // const response = await fetch(uri, options);
-        // const data = await response.json();
-        // console.log(data)
+//         // TODO: 残高情報APIのリクエスト
+//         // const uri = 'https://api.nijivoice.com/api/platform/v1/balances';
+//         // const response = await fetch(uri, options);
+//         // const data = await response.json();
+//         // console.log(data)
 
-        // TODO: 残高を返す: data.balances.remainingBalance
-        return 0;
-    } catch (err) {
-        console.error("残高取得エラー: ", err);
-    }
-}
+//         // TODO: 残高を返す: data.balances.remainingBalance
+//         return 0;
+//     } catch (err) {
+//         console.error("残高取得エラー: ", err);
+//     }
+// }
 
 // サーバ証明書で動かない人！
 /**
@@ -271,26 +271,26 @@ async function getBalance() {
  * 
  * Apache + PHP でプロキシ経由で取得
  */
-// async function getBalance() {
-//     try {
-//         // balance.php にリクエスト
-//         const response = await fetch("./api/balance.php");
-//         if (!response.ok) {
-//             throw new Error("残高APIリクエスト失敗");
-//         }
+async function getBalance() {
+    try {
+        // balance.php にリクエスト
+        const response = await fetch("./api/balance.php");
+        if (!response.ok) {
+            throw new Error("残高APIリクエスト失敗");
+        }
 
-//         const data = await response.json();
-//         console.log("残高API結果:", data);
+        const data = await response.json();
+        console.log("残高API結果:", data);
 
-//         // data.balances.remainingBalance があれば返す
-//         return data?.balances?.remainingBalance ?? 0;
+        // data.balances.remainingBalance があれば返す
+        return data?.balances?.remainingBalance ?? 0;
 
-//     } catch (err) {
-//         console.error("残高取得エラー: ", err);
-//         messageContainer.textContent = "残高の取得に失敗しました。";
-//         return 0;
-//     }
-// }
+    } catch (err) {
+        console.error("残高取得エラー: ", err);
+        messageContainer.textContent = "残高の取得に失敗しました。";
+        return 0;
+    }
+}
 
 /**
  * selectActor()
