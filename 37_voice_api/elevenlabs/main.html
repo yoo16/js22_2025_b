@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ElevenLabs Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-md w-full max-w-lg">
+        <h1 class="text-2xl font-bold mb-6 text-center">🎙️ ElevenLabs 音声合成</h1>
+
+        <!-- テキスト入力 -->
+        <label class="block mb-2 font-semibold">テキストを入力:</label>
+        <textarea id="textInput"
+            class="w-full border rounded-lg p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400" rows="4"
+            placeholder="ここに読み上げたい文章を入力してください"></textarea>
+
+        <!-- モデル選択 -->
+        <label class="block mb-2 font-semibold">音声モデル:</label>
+        <select id="modelSelect"
+            class="w-full border rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <option value="eleven_multilingual_v2">Multilingual v2</option>
+            <option value="eleven_turbo_v2">Turbo v2（高速・低コスト）</option>
+            <option value="eleven_turbo_v2_5">Turbo v2.5（推奨）</option>
+        </select>
+
+        <!-- 声選択 -->
+        <label class="block mb-2 font-semibold">声を選択:</label>
+        <select id="voiceSelect"
+            class="w-full border rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <option value="EXAVITQu4vr4xnSDxMaL">Rachel</option>
+            <option value="JBFqnCBsd6RMkjVDRZzb">Elli</option>
+            <option value="21m00Tcm4TlvDq8ikWAM">Adam</option>
+            <option value="TxGEqnHWrfWFTfGW9XjX">Bella</option>
+        </select>
+
+        <!-- 出力フォーマット -->
+        <label class="block mb-2 font-semibold">出力フォーマット:</label>
+        <select id="formatSelect"
+            class="w-full border rounded-lg p-2 mb-6 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <option value="mp3_44100_128">MP3 (44.1kHz / 128kbps)</option>
+            <option value="mp3_44100_64">MP3 (44.1kHz / 64kbps)</option>
+            <option value="wav_44100">WAV (44.1kHz)</option>
+            <option value="pcm_16000">PCM (16kHz)</option>
+        </select>
+
+        <!-- 再生ボタン -->
+        <button id="play"
+            class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition">
+            ▶ 再生
+        </button>
+
+        <!-- ステータス -->
+        <div id="status" class="text-sm text-gray-500 mt-3 text-center"></div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
