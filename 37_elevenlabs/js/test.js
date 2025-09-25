@@ -1,6 +1,6 @@
 // IDが"play"のボタンがクリックされたときの処理
 document.getElementById("play").addEventListener("click", async () => {
-    const text = "Hello, Eleven Labs!"; // 生成したい音声テキスト
+    const text = "こんにちは！"; // 生成したい音声テキスト
     const status = document.getElementById("status");
     status.textContent = "⏳ 音声生成中...";
 
