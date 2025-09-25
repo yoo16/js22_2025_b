@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // - Body: JSON形式で"text", "model_id", "voice_settings", "output_format"を含む
 
             // TODO: エンドポイントURLを設定
-            const endpoint = ``;
-
+            const endpoint = `https://api.elevenlabs.io/v1/text-to-speech/${voice_id}/stream`;
+            // Fetch APIを使ってPOSTリクエストを送信
             const response = await fetch(endpoint, {
                 method: "POST",
                 headers: {
@@ -63,9 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 body: JSON.stringify({
                     // TODO: text
+                    text: text,
                     // TODO: model_id
+                    model_id: model_id,
                     // TODO: voice_settings: { stability, similarity_boost }
+                    voice_settings: { stability: 0.5, similarity_boost: 0.75 },
                     // TODO: output_format
+                    format: format,
                 })
             });
 
@@ -77,6 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // 音声データをArrayBufferとして取得
             const arrayBuffer = await response.arrayBuffer();
             // mimeタイプ判定
+            // もし mp3 で始まるなら audio/mpeg
+            // もし wav で始まるなら audio/wav
+            // それ以外は audio/pcm とする
             const mimeType = format.startsWith("mp3") ? "audio/mpeg" :
                 format.startsWith("wav") ? "audio/wav" :
                     "audio/pcm";
@@ -87,13 +94,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const audio = new Audio(url);
             audio.play();
             statusEl.textContent = "再生中...";
+            // オーディオ再生が終了したら status を更新
             audio.onended = () => {
                 statusEl.textContent = "再生終了";
             };
 
             // TODO: ダウンロードボタン有効化
+            downloadBtn.href = url;
 
             // 拡張子判定
+            // mimeType に "mpeg" が含まれるなら "mp3"
             const extension = mimeType.includes("mpeg")
                 ? "mp3"
                 : mimeType.includes("wav")
