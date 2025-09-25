@@ -32,20 +32,21 @@ document.getElementById("play").addEventListener("click", async () => {
                 }),
             }
         );
-
+        // レスポンスのステータ 200番台以外はエラーとして扱う
         if (!response.ok) {
             throw new Error(`APIエラー: ${response.status}`);
         }
 
         // TODO: レスポンスの形式を確認し、音声データの取得方法を修正: arrayBuffer()
-        const audioData = {};
+        const audioData = await response.arrayBuffer();
         // TODO: 音声データのMIMEタイプを確認し、適切に設定: Blob で type: "audio/mpeg"
-        const blob = {};
-        // TODO: URL.createObjectURL() の引数を blob に修正
+        const blob = new Blob([audioData], { type: "audio/mpeg" });
+        // URL.createObjectURL() の引数を blob に修正
         const url = URL.createObjectURL(blob);
         // TODO: url から Audioオブジェクトの作成
-        const audio = {};
+        const audio = new Audio(url);
         // TODO: オーディオの再生
+        audio.play();
 
         status.textContent = "✅ 再生中...";
     } catch (err) {
