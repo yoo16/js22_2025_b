@@ -25,8 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
      * オーディオ再生
      */
     function playAudio() {
+        // input type="file" で選択されたファイルがあるか確認
         if (audioInput.files.length > 0) {
-            // 選択されたファイルを取得
+            // 選択したファイルの最初のファイルを取得
             const file = audioInput.files[0];
 
             // ファイル名表示
