@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ElevenLabs ASR デモ</title>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md relative">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">ElevenLabs ASR</h1>
+
+
+        <!-- ファイル選択（カスタマイズ） -->
+        <div class="mb-4">
+            <span class="block text-gray-700 font-medium mb-2">音声ファイル</span>
+            <div class="flex items-center gap-3">
+                <!-- カスタムボタン -->
+                <label for="audioFile"
+                    class="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition duration-200">
+                    ファイルを選択
+                </label>
+                <!-- 選択されたファイル名 -->
+                <span id="fileName" class="text-sm text-gray-600 truncate">未選択</span>
+            </div>
+            <!-- 実際のinputは非表示 -->
+            <input type="file" id="audioFile" accept="audio/*" class="hidden" />
+        </div>
+
+        <!-- オーディオプレイヤー -->
+        <audio id="audioPlayer" controls class="w-full mb-4 hidden"></audio>
+
+        <!-- 言語選択 -->
+        <label class="block mb-4">
+            <span class="text-gray-700 font-medium mb-2">
+                言語
+            </span>
+            <span class="text-xs">
+                ※指定した方が精度が上がります
+            </span>
+            <select id="languageSelect"
+                class="block w-full border rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="ja" selected>日本語</option>
+                <option value="en">英語</option>
+                <option value="zh">中国語</option>
+                <option value="ko">韓国語</option>
+                <option value="fr">フランス語</option>
+            </select>
+        </label>
+
+
+        <!-- ボタン -->
+        <button id="transcribeBtn"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-200">
+            文字起こし開始
+        </button>
+
+        <!-- 結果表示 -->
+        <div id="result"
+            class="mt-6 p-4 bg-gray-50 border rounded-lg text-gray-800 text-sm min-h-[50px] whitespace-pre-line"></div>
+    </div>
+
+    <!-- モーダルローディング -->
+    <div id="loadingModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 flex flex-col items-center shadow-xl">
+            <!-- スピナー -->
+            <svg class="animate-spin h-10 w-10 text-blue-500 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            </svg>
+            <p class="text-gray-700 font-medium">文字起こし中です...</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/asr.js"></script>
+</body>
+
+</html>
