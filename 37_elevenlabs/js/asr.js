@@ -95,7 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // TODO: データ受信
+            const data = await response.json();
             // TODO: result に文字起こし結果を表示
+            result.textContent = data.text;
         } catch (error) {
             console.error(error);
             result.textContent = "エラー: " + error.message;
