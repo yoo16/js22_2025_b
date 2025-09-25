@@ -1,5 +1,6 @@
+// IDが"play"のボタンがクリックされたときの処理
 document.getElementById("play").addEventListener("click", async () => {
-    const text = "こんにちは。の音声はElevenLabsで再生しました";
+    const text = "Hello, Eleven Labs!"; // 生成したい音声テキスト
     const status = document.getElementById("status");
     status.textContent = "⏳ 音声生成中...";
 
@@ -14,19 +15,20 @@ document.getElementById("play").addEventListener("click", async () => {
         const voice_id = "EXAVITQu4vr4xnSDxMaL"; 
         const model_id = "eleven_multilingual_v2";
          // TODO: エンドポイントURLを設定
-        const endpoint = ``;
-
+        const endpoint = `https://api.elevenlabs.io/v1/text-to-speech/${voice_id}`;
+        // Fetch APIを使ってPOSTリクエストを送信
         const response = await fetch(
             endpoint,
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "xi-api-key": "YOUR_ELEVENLABS_API_KEY",
+                    "xi-api-key": CONFIG.API_KEY, // TODO: APIキーを設定
                 },
                 body: JSON.stringify({
-                    text,
+                    text: text,
                     // TODO: ここに model_id を設定
+                    model_id: model_id,
                 }),
             }
         );
